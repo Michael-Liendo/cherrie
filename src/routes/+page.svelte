@@ -1,7 +1,11 @@
-<h1 class="text-3xl font-bold underline">Hello world!</h1>
+<script lang="ts">
+  import ProductCard from '$lib/components/ProductCard.svelte';
 
-<style lang="postcss">
-  :global(html) {
-    background-color: theme(colors.gray.100);
-  }
-</style>
+  export let data;
+</script>
+
+<div class="grid grid-cols-4 my-5">
+  {#each data.products as product}
+    <ProductCard {product} />
+  {/each}
+</div>
