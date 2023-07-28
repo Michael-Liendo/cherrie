@@ -9,7 +9,7 @@
 <div class="w-full max-w-sm bg-white rounded-lg">
   <a href={`/product/${product.id}`}>
     <img
-      class="rounded-t-lg"
+      class="rounded-t-lg object-cover h-96 w-full"
       src={product.images[0]}
       alt={`Images of ${product.title}`}
     />
@@ -26,7 +26,7 @@
       <button
         on:click={() => addProduct(product)}
         type="button"
-        class="text-white bg-[#1d242d] rounded-lg p-3 text-center"
+        class="text-white bg-slate-800 bdg-[#1d242d] rounded-lg p-3 text-center"
         ><CartPlus /></button
       >
     </div>
