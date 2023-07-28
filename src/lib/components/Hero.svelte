@@ -29,9 +29,9 @@
   }, 5000);
 </script>
 
-<div id="default-carousel" class="relative h-[50vh] w-full">
+<div id="default-carousel" class="relative h-[50vh] 2xl:w-full">
   <!-- Carousel wrapper -->
-  <div class="relative overflow-hidden rounded-lg h-full">
+  <div class="relative overflow-hidden rounded-lg h-full w-full">
     {#each images as src, index}
       <!-- Item 1 -->
       <div
@@ -40,7 +40,7 @@
       >
         <img
           {src}
-          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          class="absolute block w-full h-full object-cover"
           alt="..."
         />
       </div>
