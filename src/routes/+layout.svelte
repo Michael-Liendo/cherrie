@@ -3,7 +3,7 @@
   import '../app.css';
 </script>
 
-<div class="mx-16">
+<div class="mx-28">
   <Navbar />
   <slot />
 </div>
