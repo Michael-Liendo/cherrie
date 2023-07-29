@@ -7,6 +7,7 @@
   import Highlight from '$lib/components/Highlight.svelte';
   import ProductCard from '$lib/components/ProductCard.svelte';
   import TextField from '$lib/components/TextField.svelte';
+  import Pick from '$lib/components/Pick.svelte';
 
   export let data;
 
@@ -46,7 +47,7 @@
       We provide best customer experiences
     </h1>
     <div class="hidden sm:flex items-center space-x-3">
-      <div class="h-full w-0.5 rounded bg-slate-900" />
+      <div class="h-full w-0.5 rounded opacity-50 bg-slate-900" />
       <span class="text-slate-500"
         >We ensure our customers have the best shopping experience</span
       >
@@ -60,9 +61,18 @@
 </section>
 
 <section class="my-16">
+  <h2 class="text-3xl font-medium mt-10">Currated picks</h2>
+  <div class="flex flex-wrap justify-between my-5 space-y-5 md:space-y-0">
+    {#each data.products.slice(0, 4) as product}
+      <Pick {product} />
+    {/each}
+  </div>
+</section>
+
+<section class="my-16">
   <h2 class="text-3xl font-medium mt-10">Featured products</h2>
   <div
-    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 my-5"
+    class="grid grid-cols-1 gap-16 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 my-5"
   >
     {#each data.products.slice(0, 4) as product}
       <ProductCard {product} />
