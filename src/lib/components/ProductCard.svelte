@@ -6,10 +6,10 @@
   export let product: Product;
 </script>
 
-<div class="w-full max-w-sm bg-white rounded-lg">
+<div class="xl:w-[21rem] lg:w-96 2xl:w-[30rem] bg-white rounded-lg">
   <a href={`/product/${product.id}`}>
     <img
-      class="rounded-lg object-cover h-96 w-full"
+      class="rounded-lg object-cover h-96 xl:h-96 2xl:h-[34rem] w-full"
       src={product.images[0]}
       alt={`Images of ${product.title}`}
     />

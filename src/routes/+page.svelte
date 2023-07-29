@@ -1,7 +1,13 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
+  import Swiper from 'swiper';
+  import 'swiper/css';
+
   import MdiCurrencyUsd from '~icons/mdi/currency-usd';
   import MdiTruckFastOutline from '~icons/mdi/truck-fast-outline';
   import MdiArrowRight from '~icons/mdi/arrow-right';
+  import ChevronRight from '~icons/mdi/chevron-right';
+  import ChevronLeft from '~icons/mdi/chevron-left';
 
   import Hero from '$lib/components/Hero.svelte';
   import Highlight from '$lib/components/Highlight.svelte';
@@ -10,6 +16,27 @@
   import Pick from '$lib/components/Pick.svelte';
 
   export let data;
+
+  let swiper: Swiper;
+
+  onMount(() => {
+    swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: '7%',
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1280: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  });
 
   const highlights = [
     {
@@ -69,14 +96,34 @@
   </div>
 </section>
 
-<section class="my-16">
-  <h2 class="text-3xl font-medium mt-10">Featured products</h2>
-  <div
-    class="grid grid-cols-1 gap-16 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 my-5"
-  >
-    {#each data.products.slice(0, 4) as product}
-      <ProductCard {product} />
-    {/each}
+<section class="my-20">
+  <div class="flex justify-between items-center mb-10">
+    <h2 class="text-4xl font-medium">Featured products</h2>
+    <div class="flex top-5 divide-x-2 right-5">
+      <button
+        class="flex text-xl items-center px-2 py-2.5 border bg-white rounded-l-xl"
+        on:click={() => {
+          swiper.slidePrev();
+        }}
+        type="button"><ChevronLeft /></button
+      >
+      <button
+        class="flex text-xl items-center px-2 py-2.5 border bg-white rounded-r-xl"
+        on:click={() => {
+          swiper.slideNext();
+        }}
+        type="button"><ChevronRight /></button
+      >
+    </div>
+  </div>
+  <div class="swiper mt-5">
+    <div class="swiper-wrapper">
+      {#each data.products.slice(0, 4) as product}
+        <div class="swiper-slide">
+          <ProductCard {product} />
+        </div>
+      {/each}
+    </div>
   </div>
 </section>
 
