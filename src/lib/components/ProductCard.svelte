@@ -9,7 +9,7 @@
 <div class="w-full max-w-sm bg-white rounded-lg">
   <a href={`/product/${product.id}`}>
     <img
-      class="rounded-t-lg object-cover h-96 w-full"
+      class="rounded-lg object-cover h-96 w-full"
       src={product.images[0]}
       alt={`Images of ${product.title}`}
     />
