@@ -1,10 +1,11 @@
 export interface HomeObject {
 	notification: string[];
 	call_to_action: CallToAction;
+	hero: HeroImages[];
+	picks_categories: PicksCategory[];
 	_createdAt: string;
 	_rev: string;
 	_type: string;
-	hero: HeroImages[];
 	_id: string;
 	_updatedAt: string;
 }
@@ -19,4 +20,11 @@ export interface CallToAction {
 	small: string;
 	src: string;
 	title: string;
+}
+
+export interface PicksCategory {
+	_id: string;
+	name: string;
+	description: string;
+	src: string;
 }

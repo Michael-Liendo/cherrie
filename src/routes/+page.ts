@@ -14,7 +14,19 @@ const client = createClient({
 export async function load({ fetch }) {
 	try {
 		const response = await fetch("https://api.escuelajs.co/api/v1/products");
-		const homeData: HomeObject[] = await client.fetch(`*[_type == "home"]`);
+		const homeData: HomeObject[] = await client.fetch(`
+			*[_type == "home"]{
+				...,
+				picks_categories[]->{ 
+					_id,
+					name,
+					description,
+					"src": image.asset->url
+				}
+			}
+		`);
+
+		console.log(homeData[0]);
 
 		const productsData = await response.json();
 

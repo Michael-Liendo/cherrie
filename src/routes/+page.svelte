@@ -107,9 +107,9 @@
   <h2 class="text-3xl font-medium mb-10">Currated picks</h2>
   <div class="swiper currated-picks mt-5">
     <div class="swiper-wrapper">
-      {#each $page.data.products.slice(0, 4) as product}
+      {#each $page.data.home.picks_categories as category}
         <div class="swiper-slide">
-          <Pick {product} />
+          <Pick {category} />
         </div>
       {/each}
     </div>
