@@ -8,6 +8,8 @@
   import MdiArrowRight from '~icons/mdi/arrow-right';
   import ChevronRight from '~icons/mdi/chevron-right';
   import ChevronLeft from '~icons/mdi/chevron-left';
+  import MdiRobotHappyOutline from '~icons/mdi/robot-happy-outline';
+  import MdiCreationOutline from '~icons/mdi/creation-outline';
 
   import Hero from '$lib/components/Hero.svelte';
   import Highlight from '$lib/components/Highlight.svelte';
@@ -62,20 +64,19 @@
         'We provide money back guarantee if the product are not original',
     },
     {
-      icon: MdiTruckFastOutline,
-      title: 'Fast Shipping',
+      icon: MdiRobotHappyOutline,
+      title: 'Satisfaction Guarantee',
       description:
-        'Fast Shipping is the standard shipping method for the product',
+        "Exchange the product you've purchased if it doesn't fit on you",
     },
     {
-      icon: MdiCurrencyUsd,
-      title: 'Original Products',
-      description:
-        'We provide money back guarantee if the product are not original',
+      icon: MdiCreationOutline,
+      title: 'New arrival Everyday',
+      description: 'We updates our collections almost everyday',
     },
     {
       icon: MdiTruckFastOutline,
-      title: 'Fast Shipping',
+      title: 'Fast & Free Shipping',
       description:
         'Fast Shipping is the standard shipping method for the product',
     },

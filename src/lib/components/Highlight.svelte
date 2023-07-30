@@ -7,7 +7,7 @@
   export let Icon = highlight.icon;
 </script>
 
-<div class="mt-5 w-80">
+<div class="mt-5 w-72">
   <div class="flex md:block space-x-2 md:space-x-0">
     <button
       class="bg-slate-100 border border-slate-200 p-2.5 text-xl flex justify-center items-center rounded-lg"
