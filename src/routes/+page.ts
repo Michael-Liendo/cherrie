@@ -29,6 +29,7 @@ export async function load({ fetch }) {
 					name,
 					description,
 					price,
+					last_price,
 					"images": images[].asset->url
 				}
 			}

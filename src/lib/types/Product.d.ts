@@ -5,6 +5,7 @@ export interface Product {
 	name: string;
 	description?: string;
 	price: number;
+	last_price?: number;
 	category: Category;
 }
 
@@ -25,6 +26,7 @@ export type ProductCart = {
 	name: string;
 	description?: string;
 	price: number;
+	last_price?: number;
 	category: Category;
 	quantity: number;
 };
