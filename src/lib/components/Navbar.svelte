@@ -69,7 +69,7 @@
       </button>
       {#if cartIsOpen}
         <div
-          class="w-80 absolute z-20 p-6 -right-0 bg-white border border-gray-200 rounded-lg"
+          class="w-80 fixed sm:absolute z-20 p-6 -right-0 bg-white border border-gray-200 rounded-lg"
           use:clickOutside
           on:clickOutside={() => {
             cartIsOpen = !cartIsOpen;
