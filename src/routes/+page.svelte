@@ -17,10 +17,10 @@
 
   export let data;
 
-  let swiper: Swiper;
+  let featuredProductsSwiper: Swiper;
 
   onMount(() => {
-    swiper = new Swiper('.swiper', {
+    featuredProductsSwiper = new Swiper('.swiper', {
       slidesPerView: 1,
       spaceBetween: '7%',
       navigation: {
@@ -33,6 +33,19 @@
         },
         1280: {
           slidesPerView: 3,
+        },
+      },
+    });
+
+    const curratedPicks = new Swiper('.currated-picks', {
+      slidesPerView: 1,
+      spaceBetween: '7%',
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+        },
+        1536: {
+          slidesPerView: 4,
         },
       },
     });
@@ -87,12 +100,16 @@
   </div>
 </section>
 
-<section class="my-16">
-  <h2 class="text-3xl font-medium mt-10">Currated picks</h2>
-  <div class="flex flex-wrap justify-between my-5 space-y-5 md:space-y-0">
-    {#each data.products.slice(0, 4) as product}
-      <Pick {product} />
-    {/each}
+<section class="my-20">
+  <h2 class="text-3xl font-medium mb-10">Currated picks</h2>
+  <div class="currated-picks mt-5">
+    <div class="swiper-wrapper">
+      {#each data.products.slice(0, 4) as product}
+        <div class="swiper-slide">
+          <Pick {product} />
+        </div>
+      {/each}
+    </div>
   </div>
 </section>
 
@@ -103,14 +120,14 @@
       <button
         class="flex text-xl items-center px-2 py-2.5 border bg-white rounded-l-xl"
         on:click={() => {
-          swiper.slidePrev();
+          featuredProductsSwiper.slidePrev();
         }}
         type="button"><ChevronLeft /></button
       >
       <button
         class="flex text-xl items-center px-2 py-2.5 border bg-white rounded-r-xl"
         on:click={() => {
-          swiper.slideNext();
+          featuredProductsSwiper.slideNext();
         }}
         type="button"><ChevronRight /></button
       >
