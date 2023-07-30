@@ -69,7 +69,7 @@
       </button>
       {#if cartIsOpen}
         <div
-          class="w-fit absolute z-20 p-6 -right-0 bg-white border border-gray-200 rounded-lg"
+          class="w-80 absolute z-20 p-6 -right-0 bg-white border border-gray-200 rounded-lg"
           use:clickOutside
           on:clickOutside={() => {
             cartIsOpen = !cartIsOpen;
@@ -77,13 +77,15 @@
         >
           {#each $cart as product}
             <ProductCart {product} />
+          {:else}
+            <span>There are no products in the cart</span>
           {/each}
         </div>
       {/if}
     </div>
-    <span class="hidden md:block text-gray-700 text-xl">
+    <!-- <span class="hidden md:block text-gray-700 text-xl">
       <Profile />
-    </span>
+    </span> -->
     <button
       on:click={() => {
         menuDropdownIsOpen = !menuDropdownIsOpen;
@@ -139,10 +141,10 @@
               <a href="http://">New arrival</a>
             </li>
             <li class="hover:text-gray-600"><a href="http://">Brands</a></li>
-            <hr />
+            <!-- <hr />
             <li class="hover:text-gray-600">
               <a href="http://">Profile</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       {/if}

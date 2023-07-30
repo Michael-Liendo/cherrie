@@ -19,7 +19,7 @@
       <h5 class="text-xl font-light text-gray-900">
         {product.title}
       </h5>
-      <strong class="text-xl font-normal mt-3">${product.price}</strong>
+      <strong class="text-3xl font-medium mt-3">${product.price}</strong>
     </a>
 
     <div class="flex items-center justify-between">
