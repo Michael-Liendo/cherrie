@@ -20,7 +20,7 @@
   let featuredProductsSwiper: Swiper;
 
   onMount(() => {
-    featuredProductsSwiper = new Swiper('.swiper', {
+    featuredProductsSwiper = new Swiper('.featured-products-swiper', {
       slidesPerView: 1,
       spaceBetween: '7%',
       navigation: {
@@ -42,6 +42,9 @@
       spaceBetween: '7%',
       breakpoints: {
         768: {
+          slidesPerView: 2,
+        },
+        1280: {
           slidesPerView: 3,
         },
         1536: {
@@ -102,7 +105,7 @@
 
 <section class="my-20">
   <h2 class="text-3xl font-medium mb-10">Currated picks</h2>
-  <div class="currated-picks mt-5">
+  <div class="swiper currated-picks mt-5">
     <div class="swiper-wrapper">
       {#each data.products.slice(0, 4) as product}
         <div class="swiper-slide">
@@ -133,7 +136,7 @@
       >
     </div>
   </div>
-  <div class="swiper mt-5">
+  <div class="swiper featured-products-swiper mt-5">
     <div class="swiper-wrapper">
       {#each data.products.slice(0, 4) as product}
         <div class="swiper-slide">
