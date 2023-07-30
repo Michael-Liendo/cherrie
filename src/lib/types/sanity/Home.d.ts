@@ -1,7 +1,10 @@
+import type { Product } from "../Product";
+
 export interface HomeObject {
 	notification: string[];
 	call_to_action: CallToAction;
 	hero: HeroImages[];
+	featured_products: Product[];
 	picks_categories: PicksCategory[];
 	_createdAt: string;
 	_rev: string;

@@ -1,12 +1,17 @@
 export interface Product {
-	id: number;
-	title: string;
-	price: number;
-	description: string;
-	category: Category;
+	_id: string;
 	images: string[];
+	slug: Slug;
+	name: string;
+	description?: string;
+	price: number;
+	category: Category;
 }
 
+export interface Slug {
+	_type: string;
+	current: string;
+}
 export interface Category {
 	id: number;
 	name: string;
@@ -14,11 +19,12 @@ export interface Category {
 }
 
 export type ProductCart = {
-	id: number;
-	title: string;
+	_id: string;
+	images: string[];
+	slug: Slug;
+	name: string;
+	description?: string;
 	price: number;
-	description: string;
 	category: Category;
 	quantity: number;
-	images: string[];
 };

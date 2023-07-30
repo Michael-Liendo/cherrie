@@ -138,7 +138,7 @@
   </div>
   <div class="swiper featured-products-swiper mt-5">
     <div class="swiper-wrapper">
-      {#each $page.data.products.slice(0, 4) as product}
+      {#each $page.data.home.featured_products as product}
         <div class="swiper-slide">
           <ProductCard {product} />
         </div>

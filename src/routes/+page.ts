@@ -22,11 +22,17 @@ export async function load({ fetch }) {
 					name,
 					description,
 					"src": image.asset->url
+				},
+				featured_products[]->{
+					_id,
+					slug,
+					name,
+					description,
+					price,
+					"images": images[].asset->url
 				}
 			}
 		`);
-
-		console.log(homeData[0]);
 
 		const productsData = await response.json();
 

@@ -1,6 +1,6 @@
 <script lang="ts">
   import Trash from '~icons/mdi/delete-outline';
-  import type { Product, ProductCart } from '$lib/types/Product';
+  import type { ProductCart } from '$lib/types/Product';
   import {
     addProduct,
     decrementQuantity,
@@ -15,7 +15,7 @@
     <img
       src={product.images[0]}
       class="rounded-sm w-20 h-20 object-cover"
-      alt={product.title}
+      alt={product.name}
       width="250"
       height="250"
     />
@@ -24,11 +24,11 @@
   <div class="flex justify-between w-full ml-3">
     <div class="flex flex-col">
       <div class="flex justify-between">
-        <span title={product.title} class="text-xs w-40 truncate text-gray-500">
-          {product.title}
+        <span title={product.name} class="text-xs w-40 truncate text-gray-500">
+          {product.name}
         </span>
         <button
-          on:click={() => removeProduct(product.id)}
+          on:click={() => removeProduct(product._id)}
           class="z-30 py-1.5 px-3 hover:cursor-pointer"
         >
           <Trash />
