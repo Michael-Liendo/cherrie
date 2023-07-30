@@ -1,14 +1,22 @@
-interface HomeObject {
-	_id: string;
-	_updatedAt: string;
+export interface HomeObject {
 	notification: string[];
+	call_to_action: CallToAction;
 	_createdAt: string;
 	_rev: string;
 	_type: string;
 	hero: HeroImages[];
+	_id: string;
+	_updatedAt: string;
 }
 
-interface HeroImages {
+export interface HeroImages {
 	_key: string;
-	url: string;
+	src: string;
+}
+
+export interface CallToAction {
+	button: string;
+	small: string;
+	src: string;
+	title: string;
 }

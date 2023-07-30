@@ -1,6 +1,7 @@
 <script lang="ts">
   import ChevronRight from '~icons/mdi/chevron-right';
   import ChevronLeft from '~icons/mdi/chevron-left';
+  import type { HeroImages } from '$lib/types/sanity/Home';
 
   export let images: HeroImages[] = [];
   let imageIndex = 0;
@@ -29,7 +30,7 @@
 <div id="default-carousel" class="relative h-[50vh] 2xl:w-full">
   <!-- Carousel wrapper -->
   <div class="relative overflow-hidden rounded-lg h-full w-full">
-    {#each images as { url: src }, index}
+    {#each images as { src }, index}
       <!-- Item 1 -->
       <div
         class="transition-opacity duration-700 ease-in-out"

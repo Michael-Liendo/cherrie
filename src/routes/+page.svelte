@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { page } from '$app/stores';
   import Swiper from 'swiper';
   import 'swiper/css';
 
@@ -16,8 +17,6 @@
   import ProductCard from '$lib/components/ProductCard.svelte';
   import TextField from '$lib/components/TextField.svelte';
   import Pick from '$lib/components/Pick.svelte';
-
-  export let data;
 
   let featuredProductsSwiper: Swiper;
 
@@ -83,7 +82,7 @@
   ];
 </script>
 
-<Hero images={data.heroImages} />
+<Hero images={$page.data.home.hero} />
 
 <section class="mt-16">
   <div class="flex justify-between">
@@ -108,7 +107,7 @@
   <h2 class="text-3xl font-medium mb-10">Currated picks</h2>
   <div class="swiper currated-picks mt-5">
     <div class="swiper-wrapper">
-      {#each data.products.slice(0, 4) as product}
+      {#each $page.data.products.slice(0, 4) as product}
         <div class="swiper-slide">
           <Pick {product} />
         </div>
@@ -139,7 +138,7 @@
   </div>
   <div class="swiper featured-products-swiper mt-5">
     <div class="swiper-wrapper">
-      {#each data.products.slice(0, 4) as product}
+      {#each $page.data.products.slice(0, 4) as product}
         <div class="swiper-slide">
           <ProductCard {product} />
         </div>
@@ -152,29 +151,30 @@
   <figure class="h-full md:w-5/12">
     <img
       class="h-full w-full object-cover rounded-t-lg md:rounded-tr-none md:rounded-l-lg"
-      src="https://media.theeverygirl.com/wp-content/uploads/2022/06/the-everygirl-summer-clothes-gallery.jpg"
-      alt="..."
+      src={$page.data.home.call_to_action.src}
+      alt={$page.data.home.call_to_action.title}
     />
   </figure>
   <div
     class="p-10 h-full md:w-3/4 text-white bg-gray-900 rounded-b-lg md:rounded-bl-none md:rounded-r-lg flex flex-col justify-center"
   >
     <div>
-      <small>LIMITED OFFER</small>
+      <small>{$page.data.home.call_to_action.small}</small>
       <h1 class="text-2xl xl:text-7xl font-semibold">
-        35% off only this friday and get special gift
+        {$page.data.home.call_to_action.title}
       </h1>
     </div>
     <button
       class="flex justify-center items-center py-4 w-56 mt-10 text-lg bg-white text-slate-950 rounded-lg"
-      >Grab it now <MdiArrowRight class="ml-3" /></button
+      >{$page.data.home.call_to_action.button}
+      <MdiArrowRight class="ml-3" /></button
     >
   </div>
 </section>
 
 <section class="flex flex-col justify-center items-center my-28">
   <h1 class="text-2xl md:text-5xl font-medium md:w-3/5 text-center">
-    Subscribe to our newsletter to get updates to our lasted collections
+    Subscribe to our newsletter to get updates to our lasted
   </h1>
   <small class="my-5 text-slate-800 text-sm mx-10"
     >Get 20% off on your first order just by subscribing to our newsletter</small

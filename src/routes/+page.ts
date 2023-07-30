@@ -1,5 +1,6 @@
 export const ssr = false;
 
+import type { HomeObject } from "$lib/types/sanity/Home.js";
 import { createClient } from "@sanity/client";
 
 const client = createClient({
@@ -16,14 +17,13 @@ export async function load({ fetch }) {
 		const homeData: HomeObject[] = await client.fetch(`*[_type == "home"]`);
 
 		const productsData = await response.json();
-		console.log(homeData);
 
 		return {
 			products: productsData.slice(0, 5),
-			heroImages: homeData[0].hero,
+			home: homeData[0],
 			notifications: homeData[0].notification,
 		};
 	} catch (err) {
-		return { products: [], images: [], notifications: [] };
+		return { products: [], home: [], notifications: [] };
 	}
 }
