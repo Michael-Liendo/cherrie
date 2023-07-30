@@ -43,7 +43,7 @@
       <button
         on:click={() => addProduct(product)}
         type="button"
-        class="text-white bg-slate-800 rounded-lg p-3 text-center"
+        class="text-white bg-slate-800 rounded-lg text-lg p-4 text-center"
         ><CartPlus /></button
       >
     </div>
