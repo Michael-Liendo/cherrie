@@ -83,7 +83,7 @@
   ];
 </script>
 
-<Hero />
+<Hero images={data.heroImages} />
 
 <section class="mt-16">
   <div class="flex justify-between">

@@ -1,10 +1,16 @@
 <script lang="ts">
+  import { page } from '$app/stores';
   import MdiClose from '~icons/mdi/close';
 
   import Footer from '$lib/components/Footer.svelte';
   import Navbar from '$lib/components/Navbar.svelte';
   import '../app.css';
   let notification = true;
+
+  let notificationText =
+    $page.data.notifications[
+      Math.floor(Math.random() * $page.data.notifications.length)
+    ];
 </script>
 
 {#if notification}
@@ -13,10 +19,7 @@
   >
     <div />
     <p>
-      Sign up and GET 20% OFF for your first order. <a
-        class="underline text-gray-50 hover:text-gray-200"
-        href="https://">Sign up now</a
-      >
+      {@html notificationText}
     </p>
     <button
       type="button"

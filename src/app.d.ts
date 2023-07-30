@@ -9,6 +9,8 @@ declare global {
 		// interface Locals {}
 		interface PageData {
 			products: Product[];
+			heroImages: HeroImages[];
+			notifications: string[];
 		}
 		// interface Platform {}
 	}
