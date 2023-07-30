@@ -13,7 +13,6 @@ const client = createClient({
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch }) {
 	try {
-		const response = await fetch("https://api.escuelajs.co/api/v1/products");
 		const homeData: HomeObject[] = await client.fetch(`
 			*[_type == "home"]{
 				...,
@@ -35,14 +34,11 @@ export async function load({ fetch }) {
 			}
 		`);
 
-		const productsData = await response.json();
-
 		return {
-			products: productsData.slice(0, 5),
 			home: homeData[0],
 			notifications: homeData[0].notification,
 		};
 	} catch (err) {
-		return { products: [], home: [], notifications: [] };
+		return { home: [], notifications: [] };
 	}
 }
