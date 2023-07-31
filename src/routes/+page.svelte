@@ -82,6 +82,10 @@
   ];
 </script>
 
+<svelte:head>
+  <title>Svelte Shop</title>
+</svelte:head>
+
 <Hero images={$page.data.home.hero} />
 
 <section class="mt-16">
@@ -121,6 +125,7 @@
     <h2 class="text-4xl font-medium">Featured products</h2>
     <div class="flex top-5 divide-x-2 right-5">
       <button
+        aria-label="Previous image on slider"
         class="flex text-xl items-center px-2 py-2.5 border bg-white rounded-l-xl"
         on:click={() => {
           featuredProductsSwiper.slidePrev();
@@ -128,6 +133,7 @@
         type="button"><ChevronLeft /></button
       >
       <button
+        aria-label="Next image on slider"
         class="flex text-xl items-center px-2 py-2.5 border bg-white rounded-r-xl"
         on:click={() => {
           featuredProductsSwiper.slideNext();

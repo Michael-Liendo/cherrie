@@ -11,6 +11,10 @@
   let mainImageIndex = 0;
 </script>
 
+<svelte:head>
+  <title>{product.name} | STORE</title>
+</svelte:head>
+
 <div class="my-8">
   <nav class="flex">
     <ol role="list" class="flex items-center">
@@ -162,7 +166,7 @@
 
   <div class="mt-6 flex justify-between flex-wrap">
     {#each $page.data.home.featured_products.slice(0, 3) as product}
-      <div class="xl:w-[21rem] lg:w-96 2xl:w-[30rem] bg-white rounded-lg">
+      <section class="xl:w-[21rem] lg:w-96 2xl:w-[30rem] bg-white rounded-lg">
         <a
           data-sveltekit-reload
           class="relative"
@@ -180,12 +184,12 @@
             alt={`Images of ${product.name}`}
           />
         </a>
-        <div class="flex justify-between my-5">
+        <main class="flex justify-between my-5">
           <div>
             <a data-sveltekit-reload href={`/products/${product.slug.current}`}>
-              <h5 class="text-xl font-light text-gray-900">
+              <h1 class="text-xl font-light text-gray-900">
                 {product.name}
-              </h5>
+              </h1>
             </a>
             <div class="flex items-center">
               <strong class="text-3xl font-medium">${product.price}</strong>
@@ -199,14 +203,15 @@
 
           <div class="flex items-center justify-between">
             <button
+              aria-label="Add product to cart"
               on:click={() => addProduct(product)}
               type="button"
               class="text-white bg-slate-800 rounded-lg text-lg p-4 text-center"
               ><CartPlus /></button
             >
           </div>
-        </div>
-      </div>
+        </main>
+      </section>
     {:else}
       <p>Cargando</p>
     {/each}

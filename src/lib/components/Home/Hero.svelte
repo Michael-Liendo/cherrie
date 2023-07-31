@@ -49,12 +49,16 @@
   </div>
   <div class="absolute z-10 flex top-5 divide-x-2 right-5">
     <button
+      type="button"
+      aria-label="Previous image on slider"
       class="flex text-xl items-center p-3.5 bg-white rounded-l-xl"
       on:click={() => {
         heroSwiper.slidePrev();
       }}><ChevronLeft /></button
     >
     <button
+      type="button"
+      aria-label="Next image on slider"
       class="flex text-xl items-center p-3.5 bg-white rounded-r-xl"
       on:click={() => {
         heroSwiper.slideNext();

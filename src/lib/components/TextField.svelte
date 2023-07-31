@@ -32,6 +32,7 @@
 {#if type == 'search'}
   <div class="flex">
     <label
+      aria-label="Search products"
       for={id}
       class="inline-flex items-center pl-3 text-lg text-gray-900 bg-gray-50 border border-r-0 border-gray-300 rounded-l-md"
     >

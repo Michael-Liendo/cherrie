@@ -67,6 +67,7 @@
         on:click={() => {
           cartIsOpen = !cartIsOpen;
         }}
+        aria-label="Cart"
         class="relative text-gray-700 text-lg"
       >
         {#if $cart.length > 0}

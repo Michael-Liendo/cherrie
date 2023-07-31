@@ -13,21 +13,21 @@
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a
               href="/#"
-              class="no-underline hover:underline text-gray-500 hover:text-gray-600"
+              class="no-underline hover:underline text-gray-700 hover:text-gray-800"
               >All Collections</a
             >
           </li>
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a
               href="/#"
-              class="no-underline hover:underline text-gray-500 hover:text-gray-600"
+              class="no-underline hover:underline text-gray-700 hover:text-gray-800"
               >Winter Edition</a
             >
           </li>
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a
               href="/terminos"
-              class="no-underline hover:underline text-gray-500 hover:text-gray-600"
+              class="no-underline hover:underline text-gray-700 hover:text-gray-800"
               >Discount</a
             >
           </li>
@@ -40,21 +40,21 @@
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a
               href="/#"
-              class="no-underline hover:underline text-gray-500 hover:text-gray-600"
+              class="no-underline hover:underline text-gray-700 hover:text-gray-800"
               >About Us</a
             >
           </li>
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a
               href="/#"
-              class="no-underline hover:underline text-gray-500 hover:text-gray-600"
+              class="no-underline hover:underline text-gray-700 hover:text-gray-800"
               >Contact</a
             >
           </li>
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a
               href="/#"
-              class="no-underline hover:underline text-gray-500 hover:text-gray-600"
+              class="no-underline hover:underline text-gray-700 hover:text-gray-800"
               >Affiliates</a
             >
           </li>
@@ -67,21 +67,21 @@
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a
               href="/faq"
-              class="no-underline hover:underline text-gray-500 hover:text-gray-600"
+              class="no-underline hover:underline text-gray-700 hover:text-gray-800"
               >FAQs</a
             >
           </li>
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a
               href="/#"
-              class="no-underline hover:underline text-gray-500 hover:text-gray-600"
+              class="no-underline hover:underline text-gray-700 hover:text-gray-800"
               >Cookie Policy</a
             >
           </li>
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a
               href="/#"
-              class="no-underline hover:underline text-gray-500 hover:text-gray-600"
+              class="no-underline hover:underline text-gray-700 hover:text-gray-800"
               >Terms of Use</a
             >
           </li>
@@ -171,7 +171,7 @@
 
   <div class="bg-slate-500 opacity-40 rounded h-[1px]" />
 
-  <small class="flex justify-center text-center text-gray-500 text-sm mt-3"
+  <small class="flex justify-center text-center text-gray-700 text-sm m8-3"
     >Copyright &copy; <a href="http://">STORE</a>. All right reserved</small
   >
 </footer>

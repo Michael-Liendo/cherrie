@@ -8,7 +8,7 @@
   export let product: Product;
 </script>
 
-<div class="xl:w-[21rem] lg:w-96 2xl:w-[30rem] bg-white rounded-lg">
+<section class="xl:w-[21rem] lg:w-96 2xl:w-[30rem] bg-white rounded-lg">
   <a class="relative" href={`/products/${product.slug.current}`}>
     {#if product.last_price}
       <span
@@ -22,12 +22,12 @@
       alt={`Images of ${product.name}`}
     />
   </a>
-  <div class="flex justify-between my-5">
+  <main class="flex justify-between my-5">
     <div>
       <a href={`/products/${product.slug.current}`}>
-        <h5 class="text-xl font-light text-gray-900">
+        <h1 class="text-xl font-light text-gray-900">
           {product.name}
-        </h5>
+        </h1>
       </a>
       <div class="flex items-center">
         <strong class="text-3xl font-medium">${product.price}</strong>
@@ -41,11 +41,12 @@
 
     <div class="flex items-center justify-between">
       <button
+        aria-label="Add product to the cart"
         on:click={() => addProduct(product)}
         type="button"
         class="text-white bg-slate-800 rounded-lg text-lg p-4 text-center"
         ><CartPlus /></button
       >
     </div>
-  </div>
-</div>
+  </main>
+</section>

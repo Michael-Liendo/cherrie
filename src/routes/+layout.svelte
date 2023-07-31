@@ -26,6 +26,7 @@
       {@html notificationText}
     </p>
     <button
+      aria-label="Close main notification"
       type="button"
       on:click={() => {
         notification = false;
