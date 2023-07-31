@@ -48,3 +48,8 @@ export function decrementQuantity(product: Product): void {
 		}
 	});
 }
+
+export function clearCart() {
+	cart.set([]);
+	localStorage.setItem("cart", JSON.stringify([]));
+}

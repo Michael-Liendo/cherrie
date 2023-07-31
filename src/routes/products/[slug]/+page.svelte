@@ -1,5 +1,6 @@
 <script lang="ts">
   import CartPlus from '~icons/mdi/cart-plus';
+  import MdiEarth from '~icons/mdi/earth';
 
   import { page } from '$app/stores';
 
@@ -43,12 +44,12 @@
           <span class="mx-2 text-gray-400">/</span>
           <div class="-m-1">
             <a
-              href="/#"
+              href={`/products/${product.slug.current}`}
               title={product.name}
               class="rounded-md p-1 text-sm font-medium text-gray-600 focus:text-gray-900 focus:shadow hover:text-gray-800"
               aria-current="page"
             >
-              {product.name.slice(0, 20)}
+              {product.name}
             </a>
           </div>
         </div>
@@ -94,37 +95,34 @@
     </div>
 
     <div class="lg:col-span-2 lg:row-span-2 lg:row-end-2">
-      <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">
-        {product.name}
-      </h1>
+      <div class="flex justify-between">
+        <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">
+          {product.name}
+        </h1>
+        {#if product.last_price}
+          <span class=" bg-red-600 rounded-lg py-1.5 px-2 text-white">SALE</span
+          >
+        {/if}
+      </div>
       <span class="text-gray-900">{product.category?.name}</span>
-
       <div
-        class="mt-10 flex flex-col items-center justify-between space-y-4 border-t border-b py-4 sm:flex-row sm:space-y-0"
+        class="mt-5 flex flex-col items-center justify-between space-y-4 border-t border-b py-4 sm:flex-row sm:space-y-0"
       >
-        <div class="flex items-end">
+        <div class="flex items-start">
           <h1 class="text-3xl font-bold">${product.price}</h1>
+          {#if product.last_price}
+            <small class="text-lg line-through ml-2"
+              >${product.last_price}</small
+            >
+          {/if}
         </div>
 
         <button
           type="button"
           on:click={() => addProduct(product)}
-          class="inline-flex items-center justify-center rounded-md border-2 border-transparent bg-gray-900 bg-none px-12 py-3 text-center text-base font-bold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-gray-800"
+          class="inline-flex items-center justify-center rounded-md border-2 border-transparent bg-gray-900 bg-none px-6 py-3 text-center text-base font-bold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-gray-800"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="shrink-0 mr-3 h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-            />
-          </svg>
+          <CartPlus class="mr-4" />
           Añadir al carrito
         </button>
       </div>
@@ -133,21 +131,7 @@
         <li
           class="flex items-center text-left text-sm font-medium text-gray-600"
         >
-          <svg
-            class="mr-2 block h-5 w-5 align-middle text-gray-500"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              class=""
-            />
-          </svg>
+          <MdiEarth class="text-base" />
           Envío
         </li>
       </ul>

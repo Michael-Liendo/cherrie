@@ -35,7 +35,7 @@
       </div>
 
       <div class="flex-1">
-        <p class="uppercase text-gray-800 md:mb-6">COMPANY</p>
+        <p class="uppercase text-gray-800">COMPANY</p>
         <ul class="list-reset mb-6">
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a
@@ -62,7 +62,7 @@
       </div>
 
       <div class="flex-1">
-        <p class="uppercase text-gray-800 md:mb-6">SUPPORT</p>
+        <p class="uppercase text-gray-800">SUPPORT</p>
         <ul class="list-reset mb-6">
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a

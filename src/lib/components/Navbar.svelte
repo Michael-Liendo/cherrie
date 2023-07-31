@@ -14,10 +14,16 @@
   let menuDropdownIsOpen = false;
   let shopDropdownIsOpen = false;
   let cartIsOpen = false;
+
+  $: cartTotal = $cart.reduce(
+    (accumulator: number, product) =>
+      accumulator + product.price * product.quantity,
+    0
+  );
 </script>
 
 <nav class="flex justify-between items-center py-4">
-  <h1 class="text-2xl mx-2 md:mx-0">STORE</h1>
+  <h1 class="text-2xl mx-2 md:mx-0"><a href="/">STORE</a></h1>
   <ul
     class="hidden md:flex md:space-x-4 lg:space-x-10 font-semibold text-gray-700"
   >
@@ -80,6 +86,25 @@
           {:else}
             <span>There are no products in the cart</span>
           {/each}
+          {#if $cart.length > 0}
+            <hr />
+            <div class="mt-3 flex justify-between items-center">
+              <div class=" flex flex-col">
+                <span class="text-xs">
+                  {$cart.length} item{$cart.length === 1 ? '' : 's'}
+                </span>
+                <span class="font-medium mt-1">
+                  ${cartTotal < 1 ? '0.00' : cartTotal.toFixed(2)}
+                </span>
+              </div>
+              <a
+                href="/checkout"
+                class="text-white bg-[#2557D6] hover:bg-[#2557D6]/90 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
+              >
+                Comprar
+              </a>
+            </div>
+          {/if}
         </div>
       {/if}
     </div>
