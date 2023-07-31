@@ -38,7 +38,7 @@
       },
     });
 
-    const curratedPicks = new Swiper('.currated-picks', {
+    new Swiper('.pick-collections', {
       slidesPerView: 1,
       spaceBetween: '7%',
       breakpoints: {
@@ -140,13 +140,15 @@
 </section>
 
 <section class="my-20">
-  <h2 class="text-3xl font-medium mb-10">Colecciones</h2>
-  <div class="swiper currated-picks mt-5">
+  <h2 class="text-4xl font-medium mb-10">Colecciones</h2>
+  <div class="swiper pick-collections mt-5">
     <div class="swiper-wrapper">
-      {#each $page.data.home.picks_categories as category}
+      {#each $page.data.home.picks_collections as collection}
         <div class="swiper-slide">
-          <Pick {category} />
+          <Pick {collection} />
         </div>
+      {:else}
+        <div />
       {/each}
     </div>
   </div>

@@ -6,14 +6,14 @@ export interface Product {
 	description?: string;
 	price: number;
 	last_price?: number;
-	category: Category;
+	collection: Collection;
 }
 
 export interface Slug {
 	_type: string;
 	current: string;
 }
-export interface Category {
+export interface Collection {
 	id: number;
 	name: string;
 	image: string;
@@ -27,6 +27,6 @@ export type ProductCart = {
 	description?: string;
 	price: number;
 	last_price?: number;
-	category: Category;
+	collection: Collection;
 	quantity: number;
 };

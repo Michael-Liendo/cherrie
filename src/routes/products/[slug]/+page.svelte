@@ -19,7 +19,7 @@
   <meta
     name="keywords"
     content="Sarteza, ropa, accesorios, moda, tendencias, {product.name},{product
-      .category?.name}"
+      .collection?.name}"
   />
   <!-- Schema.org markup for Google+ -->
   <meta itemprop="name" content="{product.name} - Sarteza" />
@@ -135,7 +135,7 @@
           >
         {/if}
       </div>
-      <span class="text-gray-900">{product.category?.name}</span>
+      <span class="text-gray-900">{product.collection?.name}</span>
       <div
         class="mt-5 flex flex-col items-center justify-between space-y-4 border-t border-b py-4 sm:flex-row sm:space-y-0"
       >

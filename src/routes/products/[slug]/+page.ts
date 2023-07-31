@@ -23,7 +23,7 @@ export async function load({ params }) {
           price,
 					slug,
           last_price,
-          category->{ 
+          collection->{ 
             _id,
             name,
             description,

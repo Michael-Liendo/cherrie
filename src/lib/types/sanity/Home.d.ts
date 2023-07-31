@@ -5,7 +5,7 @@ export interface HomeObject {
 	call_to_action: CallToAction;
 	hero: HeroImages[];
 	featured_products: Product[];
-	picks_categories: PicksCategory[];
+	picks_collections: Collection[];
 	_createdAt: string;
 	_rev: string;
 	_type: string;
@@ -25,7 +25,7 @@ export interface CallToAction {
 	title: string;
 }
 
-export interface PicksCategory {
+export interface Collection {
 	_id: string;
 	name: string;
 	description: string;

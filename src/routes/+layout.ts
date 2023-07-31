@@ -16,7 +16,7 @@ export async function load({ fetch }) {
 		const homeData: HomeObject[] = await client.fetch(`
 			*[_type == "home"]{
 				...,
-				picks_categories[]->{ 
+				picks_collections[]->{ 
 					_id,
 					name,
 					description,
