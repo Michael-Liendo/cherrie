@@ -1,13 +1,15 @@
 <script lang="ts">
   import Swiper from 'swiper/bundle';
+  import { onMount } from 'svelte';
 
   // import styles bundle
   import 'swiper/css/bundle';
 
   import ChevronRight from '~icons/mdi/chevron-right';
+  import MdiArrowRight from '~icons/mdi/arrow-right';
   import ChevronLeft from '~icons/mdi/chevron-left';
+
   import type { HeroImages } from '$lib/types/sanity/Home';
-  import { onMount } from 'svelte';
 
   export let images: HeroImages[] = [];
 
@@ -48,8 +50,8 @@
           />
           <h1 class="absolute mx-2 text-5xl xl:text-7xl text-white">{title}</h1>
           <a
-            class="absolute bottom-10 text-black bg-white text-xl px-10 py-3 rounded-lg"
-            href={button.url}>{button.name}</a
+            class="flex items-center absolute bottom-10 text-black bg-white text-xl px-8 py-3 rounded-lg"
+            href={button.url}>{button.name} <MdiArrowRight class="ml-3" /></a
           >
         </section>
       {/each}
