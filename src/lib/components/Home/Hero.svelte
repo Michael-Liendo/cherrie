@@ -33,16 +33,25 @@
   });
 </script>
 
-<div id="default-carousel" class="relative h-[50vh] 2xl:w-full">
+<div id="default-carousel" class="relative h-[60vh] 2xl:w-full">
   <!-- Carousel wrapper -->
   <div class="swiper hero-swiper w-full h-full">
     <div class="swiper-wrapper h-full w-full">
-      {#each images as { src }, index}
-        <img
-          {src}
-          class="swiper-slide rounded-lg w-full h-full object-cover"
-          alt="..."
-        />
+      {#each images as { src, title, button }}
+        <section
+          class="relative h-full w-full flex justify-center items-center"
+        >
+          <img
+            {src}
+            class="swiper-slide rounded-lg w-full h-full object-cover"
+            alt="..."
+          />
+          <h1 class="absolute mx-2 text-5xl xl:text-7xl text-white">{title}</h1>
+          <a
+            class="absolute bottom-10 text-black bg-white text-xl px-10 py-3 rounded-lg"
+            href={button.url}>{button.name}</a
+          >
+        </section>
       {/each}
     </div>
     <div class="swiper-pagination z-20" />

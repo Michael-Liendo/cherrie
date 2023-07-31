@@ -16,6 +16,10 @@ export async function load({ fetch }) {
 		const homeData: HomeObject[] = await client.fetch(`
 			*[_type == "home"]{
 				...,
+				hero[]{ 
+					...,
+					"src": src.asset->url,
+				},
 				picks_collections[]->{ 
 					_id,
 					name,

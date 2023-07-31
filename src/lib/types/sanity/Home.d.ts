@@ -14,8 +14,16 @@ export interface HomeObject {
 }
 
 export interface HeroImages {
+	button: Button;
 	_key: string;
+	_type: string;
 	src: string;
+	title: string;
+}
+
+interface Button {
+	name: string;
+	url: string;
 }
 
 export interface CallToAction {

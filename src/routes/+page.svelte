@@ -133,7 +133,7 @@
     </div>
   </div>
   <div class="flex flex-wrap mt-4 xl:flex-nowrap md:mt-10 md:justify-between">
-    {#each highlights as highlight}
+    {#each highlights || [] as highlight}
       <Highlight {highlight} />
     {:else}
       <div />
@@ -145,7 +145,7 @@
   <h2 class="text-4xl font-medium mb-10">Colecciones</h2>
   <div class="swiper pick-collections mt-5">
     <div class="swiper-wrapper">
-      {#each $page.data.home.picks_collections as collection}
+      {#each $page.data.home.picks_collections || [] as collection}
         <div class="swiper-slide">
           <Pick {collection} />
         </div>
@@ -180,7 +180,7 @@
   </div>
   <div class="swiper featured-products-swiper mt-5">
     <div class="swiper-wrapper">
-      {#each $page.data.home.featured_products as product}
+      {#each $page.data.home.featured_products || [] as product}
         <div class="swiper-slide">
           <ProductCard {product} />
         </div>
