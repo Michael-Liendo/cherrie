@@ -8,7 +8,7 @@
       </div>
 
       <div class="flex-1">
-        <p class="uppercase text-gray-800">SHOP</p>
+        <p class="uppercase text-gray-800">Sarteza</p>
         <ul class="list-reset mb-6">
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a

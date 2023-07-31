@@ -83,7 +83,7 @@
 </script>
 
 <svelte:head>
-  <title>Svelte Shop</title>
+  <title>Sarteza</title>
 </svelte:head>
 
 <Hero images={$page.data.home.hero} />
