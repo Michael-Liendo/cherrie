@@ -13,7 +13,7 @@
     {#if product.last_price}
       <span
         class="absolute text-xl bg-red-600 rounded-lg py-2 px-3 top-6 left-5 text-white"
-        >SALE</span
+        >DESCUENTO</span
       >
     {/if}
     <img
