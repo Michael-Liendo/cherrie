@@ -135,6 +135,8 @@
   <div class="flex flex-wrap mt-4 xl:flex-nowrap md:mt-10 md:justify-between">
     {#each highlights as highlight}
       <Highlight {highlight} />
+    {:else}
+      <div />
     {/each}
   </div>
 </section>
@@ -182,6 +184,8 @@
         <div class="swiper-slide">
           <ProductCard {product} />
         </div>
+      {:else}
+        <div />
       {/each}
     </div>
   </div>

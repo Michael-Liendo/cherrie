@@ -240,7 +240,7 @@
         </main>
       </section>
     {:else}
-      <p>Cargando</p>
+      <p>No hay productos para recomendar</p>
     {/each}
   </div>
 </div>
