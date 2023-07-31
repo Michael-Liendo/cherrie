@@ -144,7 +144,6 @@
   <div class="bg-slate-500 opacity-40 rounded h-[1px]" />
 
   <small class="flex justify-center text-center text-gray-700 text-sm mt-3"
-    >Copyright &copy; <a href="http://">Sarteza</a>. Todos los derechos
-    reservados</small
+    >Copyright &copy; <a href="/">Sarteza</a>. Todos los derechos reservados</small
   >
 </footer>
