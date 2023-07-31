@@ -1,0 +1,15 @@
+{
+	"name": "sarteza.com",
+	"description": "Descubre la mejor selección de ropa y accesorios de moda en Sarteza, la tienda líder en Venezuela. Encuentra las últimas tendencias y estilos para hombres y mujeres.",
+	"short_name": "sarteza",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "/favicon-512x512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"display": "standalone",
+	"scope": "/"
+}

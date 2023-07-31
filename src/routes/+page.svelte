@@ -64,17 +64,17 @@
     },
     {
       icon: MdiRobotHappyOutline,
-      title: 'Garantía de satisfacción',
-      description: 'Cambia el producto que has comprado si no te queda bien',
+      title: 'Calidad Garantizada',
+      description: 'Todos nuestros productos son de la mejor calidad',
     },
     {
       icon: MdiCreationOutline,
-      title: 'Nueva llegada todos los días',
-      description: 'Actualizamos nuestras colecciones casi todos los días',
+      title: 'Nueva llegada todos los meses',
+      description: 'Actualizamos nuestras colecciones todos los meses',
     },
     {
       icon: MdiTruckFastOutline,
-      title: 'Envío rápido y gratuito',
+      title: 'Envío rápido',
       description:
         'El envío rápido es el método de envío estándar para el producto',
     },

@@ -1,6 +1,5 @@
 <script lang="ts">
   import Cart from '~icons/mdi/cart-outline';
-  import Profile from '~icons/mdi/account-outline';
   import Chevron from '~icons/mdi/chevron-down';
   import MdiMenu from '~icons/mdi/menu';
   import MdiMenuClose from '~icons/mdi/menu-close';
@@ -58,8 +57,8 @@
         </div>
       {/if}
     </li>
-    <li class="hover:text-gray-600"><a href="http://">Más buscado</a></li>
-    <li class="hover:text-gray-600"><a href="http://">Nuevos</a></li>
+    <li class="hover:text-gray-600"><a href="/mas-buscados">Más buscado</a></li>
+    <li class="hover:text-gray-600"><a href="/nuevos">Nuevos</a></li>
   </ul>
   <div class="flex space-x-5 items-center">
     <TextField name="search" type="search" />
@@ -119,6 +118,7 @@
       <Profile />
     </span> -->
     <button
+      aria-label="Abrir cerrrar menu"
       on:click={() => {
         menuDropdownIsOpen = !menuDropdownIsOpen;
       }}
@@ -159,7 +159,7 @@
                   >
                     <li>
                       <a href="/#" class="block px-4 py-2 hover:bg-gray-100"
-                        >Zapatos</a
+                        >Accesorios</a
                       >
                     </li>
                   </ul>
@@ -167,10 +167,10 @@
               {/if}
             </li>
             <li class="hover:text-gray-600">
-              <a href="http://">Más buscado</a>
+              <a href="/mas-buscados">Más buscado</a>
             </li>
             <li class="hover:text-gray-600">
-              <a href="http://">Nuevos</a>
+              <a href="/nuevos">Nuevos</a>
             </li>
             <!-- <hr />
             <li class="hover:text-gray-600">
