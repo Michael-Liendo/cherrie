@@ -1,5 +1,5 @@
 <script lang="ts">
-  // import { NotificationList, Position } from '@whizzes/svelte-notifications';
+  import { NotificationList, Position } from '@whizzes/svelte-notifications';
   import MdiClose from '~icons/mdi/close';
   import MdiCheck from '~icons/mdi/check';
 
@@ -54,7 +54,7 @@
   <slot />
 </div>
 <Footer />
-<!-- 
+
 <NotificationList
   class="right-5 z-50"
   position={Position.TopRight}
@@ -72,4 +72,4 @@
     </div>
     <div class="ml-3 font-medium">{notification.message}</div>
   </div>
-</NotificationList> -->
+</NotificationList>
