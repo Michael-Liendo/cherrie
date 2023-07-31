@@ -9,7 +9,7 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		interface PageData {
-			products: Product[];
+			product: Product;
 			home: HomeObject;
 			notifications: string[];
 		}

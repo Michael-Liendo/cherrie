@@ -9,7 +9,7 @@
 </script>
 
 <div class="xl:w-[21rem] lg:w-96 2xl:w-[30rem] bg-white rounded-lg">
-  <a class="relative" href={`/product/${product.slug.current}`}>
+  <a class="relative" href={`/products/${product.slug.current}`}>
     {#if product.last_price}
       <span
         class="absolute text-xl bg-red-600 rounded-lg py-2 px-3 top-6 left-5 text-white"
@@ -24,7 +24,7 @@
   </a>
   <div class="flex justify-between my-5">
     <div>
-      <a href={`/product/${product.slug.current}`}>
+      <a href={`/products/${product.slug.current}`}>
         <h5 class="text-xl font-light text-gray-900">
           {product.name}
         </h5>

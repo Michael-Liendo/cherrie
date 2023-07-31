@@ -6,7 +6,7 @@
   import Navbar from '$lib/components/Navbar.svelte';
   import '../app.css';
 
-  let notification = true;
+  let notification = Boolean(sessionStorage.getItem('notification') || true);
 
   let notificationText =
     $page.data.notifications[
@@ -26,6 +26,7 @@
       type="button"
       on:click={() => {
         notification = false;
+        sessionStorage.setItem('notification', 'false');
       }}><MdiClose /></button
     >
   </div>

@@ -12,11 +12,11 @@
   import MdiRobotHappyOutline from '~icons/mdi/robot-happy-outline';
   import MdiCreationOutline from '~icons/mdi/creation-outline';
 
-  import Hero from '$lib/components/Hero.svelte';
-  import Highlight from '$lib/components/Highlight.svelte';
-  import ProductCard from '$lib/components/ProductCard.svelte';
+  import Hero from '$lib/components/Home/Hero.svelte';
+  import Highlight from '$lib/components/Home/Highlight.svelte';
+  import ProductCard from '$lib/components/Home/ProductCard.svelte';
   import TextField from '$lib/components/TextField.svelte';
-  import Pick from '$lib/components/Pick.svelte';
+  import Pick from '$lib/components/Home/Pick.svelte';
 
   let featuredProductsSwiper: Swiper;
 
