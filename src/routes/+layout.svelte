@@ -17,6 +17,20 @@
     ];
 </script>
 
+<svelte:head>
+  <meta name="theme-color" content="#3bd6cf" />
+
+  <link rel="canonical" href={`https://sarteza.com/`} />
+
+  <meta name="author" content="Sarteza" />
+  <meta name="publisher" content="Sarteza" />
+  <meta name="copyright" content="Sarteza" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" /> -->
+</svelte:head>
+
 {#if notification}
   <div
     class="flex items-center justify-between h-10 bg-slate-900 text-white px-2 sm:px-16 md:px-20 xl:px-28"

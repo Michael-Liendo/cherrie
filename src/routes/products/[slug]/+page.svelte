@@ -9,10 +9,36 @@
   let product = $page.data.product;
 
   let mainImageIndex = 0;
+
+  const productUrl = `https://sarteza.com/products/${product.slug.current}`;
 </script>
 
 <svelte:head>
-  <title>{product.name} | STORE</title>
+  <title>{product.name} - Sarteza</title>
+  <meta name="description" content={product.description || 'Sin descripción'} />
+  <meta
+    name="keywords"
+    content="Sarteza, ropa, accesorios, moda, tendencias, {product.name},{product
+      .category?.name}"
+  />
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="{product.name} - Sarteza" />
+  <meta
+    itemprop="description"
+    content={product.description || 'Sin descripción'}
+  />
+  <meta itemprop="image" content={product.images[mainImageIndex]} />
+  <!-- Open Graph data -->
+  <meta property="og:title" content="{product.name} - Sarteza" />
+  <meta property="og:type" content="product" />
+  <meta property="og:url" content={productUrl} />
+  <meta property="og:image" content={product.images[mainImageIndex]} />
+  <meta
+    property="og:description"
+    content={product.description || 'Sin descripción'}
+  />
+  <meta property="og:site_name" content="Sarteza" />
+  <!-- Facebook graph data -->
 </svelte:head>
 
 <div class="my-8">
