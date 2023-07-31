@@ -1,6 +1,9 @@
 <script lang="ts">
-  import { page } from '$app/stores';
+  import { NotificationList, Position } from '@whizzes/svelte-notifications';
   import MdiClose from '~icons/mdi/close';
+  import MdiCheck from '~icons/mdi/check';
+
+  import { page } from '$app/stores';
 
   import Footer from '$lib/components/Footer.svelte';
   import Navbar from '$lib/components/Navbar.svelte';
@@ -36,3 +39,22 @@
   <slot />
 </div>
 <Footer />
+
+<NotificationList
+  class="right-5 z-50"
+  position={Position.TopRight}
+  let:notification
+>
+  <div
+    class="flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow"
+    role="alert"
+  >
+    <div
+      class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg"
+    >
+      <MdiCheck />
+      <span class="sr-only">Check icon</span>
+    </div>
+    <div class="ml-3 font-medium">{notification.message}</div>
+  </div>
+</NotificationList>

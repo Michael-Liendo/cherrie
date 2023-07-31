@@ -1,4 +1,5 @@
 import type { Product, ProductCart } from "$lib/types/Product";
+import { notifications } from "@whizzes/svelte-notifications";
 import { writable } from "svelte/store";
 
 const storedCart = localStorage.getItem("cart");
@@ -6,6 +7,7 @@ const storedCart = localStorage.getItem("cart");
 export const cart = writable<ProductCart[]>(JSON.parse(storedCart || "[]"));
 
 export function addProduct(product: Product): void {
+	notifications.notifySuccess("Product added", "Cart");
 	cart.update((cartProducts) => {
 		const index = cartProducts.findIndex(({ _id }) => _id === product._id);
 

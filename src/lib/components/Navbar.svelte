@@ -20,6 +20,11 @@
       accumulator + product.price * product.quantity,
     0
   );
+
+  $: cartItemsTotal = $cart.reduce(
+    (accumulator: number, product) => accumulator + product.quantity,
+    0
+  );
 </script>
 
 <nav class="flex justify-between items-center py-4">
@@ -91,7 +96,7 @@
             <div class="mt-3 flex justify-between items-center">
               <div class=" flex flex-col">
                 <span class="text-xs">
-                  {$cart.length} item{$cart.length === 1 ? '' : 's'}
+                  {cartItemsTotal} item{cartItemsTotal === 1 ? '' : 's'}
                 </span>
                 <span class="font-medium mt-1">
                   ${cartTotal < 1 ? '0.00' : cartTotal.toFixed(2)}

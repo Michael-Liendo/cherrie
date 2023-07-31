@@ -1,6 +1,8 @@
 <script lang="ts">
-  import Swiper from 'swiper';
-  import 'swiper/css';
+  import Swiper from 'swiper/bundle';
+
+  // import styles bundle
+  import 'swiper/css/bundle';
 
   import ChevronRight from '~icons/mdi/chevron-right';
   import ChevronLeft from '~icons/mdi/chevron-left';
@@ -13,13 +15,20 @@
   onMount(() => {
     heroSwiper = new Swiper('.hero-swiper', {
       loop: true,
+      speed: 1000,
       slidesPerView: 1,
       spaceBetween: '7%',
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      autoplay: { delay: 2000 },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3500,
+      },
     });
   });
 </script>
@@ -36,6 +45,7 @@
         />
       {/each}
     </div>
+    <div class="swiper-pagination z-20" />
   </div>
   <div class="absolute z-10 flex top-5 divide-x-2 right-5">
     <button
@@ -50,15 +60,5 @@
         heroSwiper.slideNext();
       }}><ChevronRight /></button
     >
-  </div>
-  <!-- Slider indicators -->
-  <div class="absolute z-10 flex space-x-3 bottom-5 left-1/2">
-    {#each images as _, index}
-      <button
-        type="button"
-        class="w-3 h-3 bg-slate-200 rounded-full"
-        on:click={() => heroSwiper.slideTo(index)}
-      />
-    {/each}
   </div>
 </div>
