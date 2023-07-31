@@ -28,7 +28,7 @@
 </script>
 
 <nav class="flex justify-between items-center py-4">
-  <h1 class="text-2xl mx-2 md:mx-0"><a href="/">STORE</a></h1>
+  <h1 class="text-2xl mx-2 md:mx-0"><a href="/">Sarteza</a></h1>
   <ul
     class="hidden md:flex md:space-x-4 lg:space-x-10 font-semibold text-gray-700"
   >
@@ -36,7 +36,7 @@
       <button
         class="flex items-center"
         on:click={() => (shopDropdownIsOpen = !shopDropdownIsOpen)}
-        >Shop <Chevron /></button
+        >Tienda <Chevron /></button
       >
       {#if shopDropdownIsOpen}
         <div
@@ -50,15 +50,16 @@
             aria-labelledby="dropdownDefaultButton"
           >
             <li>
-              <a href="/#" class="block px-4 py-2 hover:bg-gray-100">Shoes</a>
+              <a href="/#" class="block px-4 py-2 hover:bg-gray-100"
+                >Accesorios</a
+              >
             </li>
           </ul>
         </div>
       {/if}
     </li>
-    <li class="hover:text-gray-600"><a href="http://">Most wanted</a></li>
-    <li class="hover:text-gray-600"><a href="http://">New arrival</a></li>
-    <li class="hover:text-gray-600"><a href="http://">Brands</a></li>
+    <li class="hover:text-gray-600"><a href="http://">Más buscado</a></li>
+    <li class="hover:text-gray-600"><a href="http://">Nuevos</a></li>
   </ul>
   <div class="flex space-x-5 items-center">
     <TextField name="search" type="search" />
@@ -90,14 +91,14 @@
           {#each $cart as product}
             <ProductCart {product} />
           {:else}
-            <span>There are no products in the cart</span>
+            <span>No hay productos en el carrito</span>
           {/each}
           {#if $cart.length > 0}
             <hr />
             <div class="mt-3 flex justify-between items-center">
               <div class=" flex flex-col">
                 <span class="text-xs">
-                  {cartItemsTotal} item{cartItemsTotal === 1 ? '' : 's'}
+                  {cartItemsTotal} producto{cartItemsTotal === 1 ? '' : 's'}
                 </span>
                 <span class="font-medium mt-1">
                   ${cartTotal < 1 ? '0.00' : cartTotal.toFixed(2)}
@@ -158,7 +159,7 @@
                   >
                     <li>
                       <a href="/#" class="block px-4 py-2 hover:bg-gray-100"
-                        >Shoes</a
+                        >Zapatos</a
                       >
                     </li>
                   </ul>
@@ -166,12 +167,11 @@
               {/if}
             </li>
             <li class="hover:text-gray-600">
-              <a href="http://">Most wanted</a>
+              <a href="http://">Más buscado</a>
             </li>
             <li class="hover:text-gray-600">
-              <a href="http://">New arrival</a>
+              <a href="http://">Nuevos</a>
             </li>
-            <li class="hover:text-gray-600"><a href="http://">Brands</a></li>
             <!-- <hr />
             <li class="hover:text-gray-600">
               <a href="http://">Profile</a>

@@ -3,66 +3,45 @@
     <div class="w-full flex flex-col md:flex-row py-6">
       <div class="flex-1 mb-6 text-black">
         <a class="flex text-slate-700 font-bold text-2xl lg:text-4xl" href="/">
-          <span>STORE</span>
+          <span>SARTEZA</span>
         </a>
       </div>
 
       <div class="flex-1">
-        <p class="uppercase text-gray-800">Sarteza</p>
+        <p class="uppercase text-gray-800">Tienda</p>
         <ul class="list-reset mb-6">
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a
               href="/#"
               class="no-underline hover:underline text-gray-700 hover:text-gray-800"
-              >All Collections</a
-            >
-          </li>
-          <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-            <a
-              href="/#"
-              class="no-underline hover:underline text-gray-700 hover:text-gray-800"
-              >Winter Edition</a
-            >
-          </li>
-          <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-            <a
-              href="/terminos"
-              class="no-underline hover:underline text-gray-700 hover:text-gray-800"
-              >Discount</a
+              >Todas las colecciones</a
             >
           </li>
         </ul>
       </div>
 
       <div class="flex-1">
-        <p class="uppercase text-gray-800">COMPANY</p>
+        <p class="uppercase text-gray-800">COMPAÑÍA</p>
         <ul class="list-reset mb-6">
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a
               href="/#"
               class="no-underline hover:underline text-gray-700 hover:text-gray-800"
-              >About Us</a
+              >Sobre Nosotros</a
             >
           </li>
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a
               href="/#"
               class="no-underline hover:underline text-gray-700 hover:text-gray-800"
-              >Contact</a
-            >
-          </li>
-          <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-            <a
-              href="/#"
-              class="no-underline hover:underline text-gray-700 hover:text-gray-800"
-              >Affiliates</a
+              >Contacto</a
             >
           </li>
         </ul>
       </div>
 
       <div class="flex-1">
-        <p class="uppercase text-gray-800">SUPPORT</p>
+        <p class="uppercase text-gray-800">SOPORTE</p>
         <ul class="list-reset mb-6">
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a
@@ -75,21 +54,14 @@
             <a
               href="/#"
               class="no-underline hover:underline text-gray-700 hover:text-gray-800"
-              >Cookie Policy</a
-            >
-          </li>
-          <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-            <a
-              href="/#"
-              class="no-underline hover:underline text-gray-700 hover:text-gray-800"
-              >Terms of Use</a
+              >Términos de Uso</a
             >
           </li>
         </ul>
       </div>
 
       <div class="flex-1">
-        <p class="uppercase text-gray-800 md:mb-6">PAYMENT METHODS</p>
+        <p class="uppercase text-gray-800 md:mb-6">MÉTODOS DE PAGO</p>
         <ul class="flex items-center mb-6 space-x-3">
           <li class="mt-2 inline-block md:block">
             <svg
@@ -171,7 +143,8 @@
 
   <div class="bg-slate-500 opacity-40 rounded h-[1px]" />
 
-  <small class="flex justify-center text-center text-gray-700 text-sm m8-3"
-    >Copyright &copy; <a href="http://">STORE</a>. All right reserved</small
+  <small class="flex justify-center text-center text-gray-700 text-sm mt-3"
+    >Copyright &copy; <a href="http://">Sarteza</a>. Todos los derechos
+    reservados</small
   >
 </footer>
