@@ -40,19 +40,21 @@
   <div class="swiper hero-swiper w-full h-full">
     <div class="swiper-wrapper h-full w-full">
       {#each images as { src, title, button }}
-        <section
-          class="relative h-full w-full flex justify-center items-center"
-        >
-          <img
-            {src}
-            class="swiper-slide rounded-lg w-full h-full object-cover"
-            alt="..."
-          />
-          <h1 class="absolute mx-2 text-5xl xl:text-7xl text-white">{title}</h1>
-          <a
-            class="flex items-center absolute bottom-10 text-black bg-white text-xl px-8 py-3 rounded-lg"
-            href={button.url}>{button.name} <MdiArrowRight class="ml-3" /></a
-          >
+        <section class="swiper-slide">
+          <div class="relative h-full w-full flex justify-center items-center">
+            <img
+              {src}
+              class="rounded-lg w-full h-full object-cover"
+              alt="..."
+            />
+            <h1 class="absolute mx-2 text-5xl xl:text-7xl text-white">
+              {title}
+            </h1>
+            <a
+              class="flex items-center absolute bottom-10 text-black bg-white text-xl px-8 py-3 rounded-lg"
+              href={button.url}>{button.name} <MdiArrowRight class="ml-3" /></a
+            >
+          </div>
         </section>
       {/each}
     </div>
