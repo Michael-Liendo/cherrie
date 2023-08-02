@@ -143,7 +143,7 @@
               <button
                 class="flex items-center"
                 on:click={() => (shopDropdownIsOpen = !shopDropdownIsOpen)}
-                >Shop <Chevron /></button
+                >Tienda <Chevron /></button
               >
               {#if shopDropdownIsOpen}
                 <div
