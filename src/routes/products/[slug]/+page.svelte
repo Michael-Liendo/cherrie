@@ -60,7 +60,7 @@
           <span class="mx-2 text-gray-400">/</span>
           <div class="-m-1">
             <a
-              href="/product"
+              href="/products"
               class="rounded-md p-1 text-sm font-medium text-gray-600 focus:text-gray-900 focus:shadow hover:text-gray-800"
             >
               Productos

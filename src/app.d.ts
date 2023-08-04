@@ -17,6 +17,7 @@ declare global {
 			product: Product;
 			home: HomeObject;
 			notifications: string[];
+			products: Product[];
 		}
 		// interface Platform {}
 	}
