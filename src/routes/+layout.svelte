@@ -56,7 +56,7 @@
 <Footer />
 
 <NotificationList
-  class="right-5 z-50"
+  class="left-20  z-50"
   position={Position.TopRight}
   let:notification
 >
