@@ -62,12 +62,9 @@
           id="dropdown"
           class="z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
         >
-          <ul
-            class="py-2 text-sm text-gray-700"
-            aria-labelledby="dropdownDefaultButton"
-          >
+          <ul class="py-2 text-sm text-gray-700">
             <li>
-              <a href="/#" class="block px-4 py-2 hover:bg-gray-100"
+              <a href="/products" class="block px-4 py-2 hover:bg-gray-100"
                 >Accesorios</a
               >
             </li>
@@ -75,8 +72,7 @@
         </div>
       {/if}
     </li>
-    <li class="hover:text-gray-600"><a href="/mas-buscados">Más buscado</a></li>
-    <li class="hover:text-gray-600"><a href="/nuevos">Nuevos</a></li>
+    <li class="hover:text-gray-600"><a href="/products">Productos</a></li>
   </ul>
   <div class="flex space-x-5 items-center">
     <div class="relative">
