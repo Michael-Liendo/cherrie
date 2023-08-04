@@ -58,9 +58,9 @@
   const highlights = [
     {
       icon: MdiCurrencyUsd,
-      title: 'Productos originales',
+      title: 'Productos a bajos precio',
       description:
-        'Ofrecemos garantía de devolución de dinero si el producto no es original',
+        'Ofrecemos productos de buena calidad, con estilo y un bajo costo',
     },
     {
       icon: MdiRobotHappyOutline,
@@ -76,7 +76,7 @@
       icon: MdiTruckFastOutline,
       title: 'Envío rápido',
       description:
-        'El envío rápido es el método de envío estándar para el producto',
+        'A través de tu empresa preferida de envíos, Zoom, MRW, y Tealca',
     },
   ];
 </script>
