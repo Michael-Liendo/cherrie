@@ -9,10 +9,15 @@
   import TextField from './TextField.svelte';
   import { clickOutside } from '$lib/actions/click-outside';
   import ProductCart from './ProductCart.svelte';
+  import { createClient } from '@sanity/client';
+  import type { Product } from '$lib/types/Product';
 
   let menuDropdownIsOpen = false;
   let shopDropdownIsOpen = false;
   let cartIsOpen = false;
+
+  let searchTerm = '';
+  let searchResults: Product[] = [];
 
   $: cartTotal = $cart.reduce(
     (accumulator: number, product) =>
@@ -24,6 +29,19 @@
     (accumulator: number, product) => accumulator + product.quantity,
     0
   );
+
+  const sanityClient = createClient({
+    projectId: import.meta.env.VITE_SANITY_PROYECT_ID,
+    dataset: 'production',
+    apiVersion: '2023-07-30',
+    useCdn: false,
+  });
+
+  async function searchProducts() {
+    if (!searchTerm.trim()) return;
+    const query = `*[_type == "product" && name match "${searchTerm}*"]{ name, slug, description, price }`;
+    searchResults = await sanityClient.fetch(query);
+  }
 </script>
 
 <nav class="flex justify-between items-center py-4">
@@ -61,7 +79,37 @@
     <li class="hover:text-gray-600"><a href="/nuevos">Nuevos</a></li>
   </ul>
   <div class="flex space-x-5 items-center">
-    <TextField name="search" type="search" />
+    <div class="relative">
+      <TextField
+        name="search"
+        type="search"
+        bind:value={searchTerm}
+        on:change={() => {
+          searchProducts();
+        }}
+      />
+      {#if searchTerm.length > 0}
+        <div
+          class="absolute p-6 w-full divide-y-2 -right-0 z-20 bg-white border border-gray-200 rounded-lg"
+        >
+          <ul>
+            {#each searchResults as product}
+              <li>
+                <a
+                  class="flex space-x-5 items-center justify-between"
+                  href={`/products/${product.slug.current}`}
+                >
+                  <h3>{product.name}</h3>
+                  <p class="font-medium">${product.price}</p>
+                </a>
+              </li>
+            {:else}
+              <p class="text-sm">No hay resultados de búsqueda</p>
+            {/each}
+          </ul>
+        </div>
+      {/if}
+    </div>
     <div class="relative">
       <button
         on:click={() => {
