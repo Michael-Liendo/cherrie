@@ -19,7 +19,7 @@
     )
     .toFixed(2);
 
-  $: linkToOrder = `https://wa.me/584149409930?text=*Nombre:* ${customerName}%0A*Método Pago:* ${customerPayment}%0A *PRODUCTOS:*%0A${$cart
+  $: linkToOrder = `https://wa.me/584125719288?text=*Nombre:* ${customerName}%0A*Método Pago:* ${customerPayment}%0A *PRODUCTOS:*%0A${$cart
     .map((item) => `${item.name} - ${item.price} - ${item.quantity}%0A`)
     .join(', ')}%0A *TOTAL:* $${cartTotal}`;
 </script>
