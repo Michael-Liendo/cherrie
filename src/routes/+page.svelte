@@ -208,11 +208,14 @@
         {$page.data.home.call_to_action.title}
       </h1>
     </div>
-    <button
-      class="flex justify-center items-center py-4 w-56 mt-10 text-lg bg-white text-slate-950 rounded-lg"
-      >{$page.data.home.call_to_action.button}
-      <MdiArrowRight class="ml-3" /></button
-    >
+    <a href={$page.data.home.call_to_action.button.url}>
+      <button
+        type="button"
+        class="flex justify-center items-center py-4 w-56 mt-10 text-lg bg-white text-slate-950 rounded-lg"
+        >{$page.data.home.call_to_action.button.name}
+        <MdiArrowRight class="ml-3" /></button
+      >
+    </a>
   </div>
 </section>
 

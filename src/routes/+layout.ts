@@ -16,6 +16,10 @@ export async function load({ fetch }) {
 		const homeData: HomeObject[] = await client.fetch(`
 			*[_type == "home"]{
 				...,
+				call_to_action {
+					...,
+					"src": src.asset->url,
+				},
 				hero[]{ 
 					...,
 					"src": src.asset->url,
@@ -37,6 +41,7 @@ export async function load({ fetch }) {
 				}
 			}
 		`);
+		console.log(homeData[0]);
 
 		return {
 			home: homeData[0],

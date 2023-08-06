@@ -27,7 +27,7 @@ interface Button {
 }
 
 export interface CallToAction {
-	button: string;
+	button: Button;
 	small: string;
 	src: string;
 	title: string;

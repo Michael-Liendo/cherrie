@@ -5,9 +5,6 @@
 
   import { cart, clearCart } from '$lib/store/cart';
 
-  let customerName = '';
-  let customerPayment = '';
-
   $: cartTotal = $cart
     .reduce(
       (accumulator: number, product) =>
@@ -31,7 +28,9 @@
       payment: Yup.string().required('Tipo de pago es requerido'),
     }),
     onSubmit(values, helpers) {
-      window.location.href = `https://wa.me/584149409930?text=*Nombre:* ${customerName}%0A*Método Pago:* ${customerPayment}%0A*PRODUCTOS:*%0A${$cart
+      window.location.href = `https://wa.me/584149409930?text=*Nombre:* ${
+        values.name
+      }%0A*Método Pago:* ${values.payment}%0A*PRODUCTOS:*%0A${$cart
         .map(
           (item) =>
             `Nombre: ${item.name} - Precio: $${item.price} - Cantidad: ${item.quantity}%0A - SLUG: ${item.slug.current}`
