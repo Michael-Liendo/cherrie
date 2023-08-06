@@ -53,9 +53,7 @@
   </ol>
 </nav>
 
-<div
-  class="min-h-screen mt-5 grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
->
+<div class="min-h-screen mt-5 flex justify-between flex-wrap">
   {#each $page.data.products as product}
     <ProductCard {product} />
   {/each}
