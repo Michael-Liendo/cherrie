@@ -144,6 +144,7 @@
         <option value="pago-movil">Pago Móvil</option>
         <option value="transferencia">Transferencia bancaria</option>
         <option value="zinli">Zinli</option>
+        <option value="paypal">PayPal</option>
       </select>
       {#if $errors.payment}
         <p class="text-sm font-medium text-red-600">{$errors.payment}</p>
