@@ -202,8 +202,9 @@
                     aria-labelledby="dropdownDefaultButton"
                   >
                     <li>
-                      <a href="/#" class="block px-4 py-2 hover:bg-gray-100"
-                        >Accesorios</a
+                      <a
+                        href="/products"
+                        class="block px-4 py-2 hover:bg-gray-100">Accesorios</a
                       >
                     </li>
                   </ul>
@@ -211,10 +212,7 @@
               {/if}
             </li>
             <li class="hover:text-gray-600">
-              <a href="/mas-buscados">Más buscado</a>
-            </li>
-            <li class="hover:text-gray-600">
-              <a href="/nuevos">Nuevos</a>
+              <a href="/products">Productos</a>
             </li>
             <!-- <hr />
             <li class="hover:text-gray-600">
