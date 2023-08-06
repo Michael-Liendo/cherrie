@@ -34,7 +34,7 @@
       window.location.href = `https://wa.me/584149409930?text=*Nombre:* ${customerName}%0A*Método Pago:* ${customerPayment}%0A*PRODUCTOS:*%0A${$cart
         .map(
           (item) =>
-            `Nombre: ${item.name} - $${item.price} - Cantidad: ${item.quantity}%0A - SLUG: ${item.slug}`
+            `Nombre: ${item.name} - Precio: $${item.price} - Cantidad: ${item.quantity}%0A - SLUG: ${item.slug.current}`
         )
         .join(', ')}%0A*TOTAL:* $${cartTotal}`;
       clearCart();
