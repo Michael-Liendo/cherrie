@@ -219,7 +219,7 @@
   </div>
 </section>
 
-<section class="flex flex-col justify-center items-center my-28">
+<!-- <section class="flex flex-col justify-center items-center my-28">
   <h1 class="text-2xl md:text-5xl font-medium md:w-3/5 text-center">
     Suscríbase a nuestro newsletter para recibir actualizaciones
   </h1>
@@ -236,4 +236,4 @@
   <small class="mt-4 text-gray-600 text-center"
     >Podrás darte de baja en cualquier momento.</small
   >
-</section>
+</section> -->
