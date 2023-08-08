@@ -47,7 +47,7 @@
               class="rounded-lg w-full h-full object-cover"
               alt="..."
             />
-            <h1 class="absolute mx-2 text-5xl xl:text-7xl text-white">
+            <h1 class="absolute mx-3 text-5xl xl:text-7xl text-white">
               {title || ''}
             </h1>
             {#if button}
