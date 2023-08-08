@@ -48,12 +48,15 @@
               alt="..."
             />
             <h1 class="absolute mx-2 text-5xl xl:text-7xl text-white">
-              {title}
+              {title || ''}
             </h1>
-            <a
-              class="flex items-center absolute bottom-10 text-black bg-white text-xl px-8 py-3 rounded-lg"
-              href={button.url}>{button.name} <MdiArrowRight class="ml-3" /></a
-            >
+            {#if button}
+              <a
+                class="flex items-center absolute bottom-10 text-black bg-white text-xl px-8 py-3 rounded-lg"
+                href={button.url}
+                >{button.name} <MdiArrowRight class="ml-3" /></a
+              >
+            {/if}
           </div>
         </section>
       {/each}
