@@ -39,7 +39,6 @@ export async function load({ fetch }) {
 				}
 			}
 		`);
-		console.log(homeData[0]);
 
 		return {
 			home: homeData[0],

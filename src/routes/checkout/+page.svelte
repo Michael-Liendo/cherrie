@@ -6,14 +6,14 @@
   import { cart, clearCart } from '$lib/store/cart';
 
   $: cartTotal = $cart
-    .reduce(
+    ?.reduce(
       (accumulator: number, product) =>
         accumulator + product.price * product.quantity,
       0
     )
     .toFixed(2);
 
-  $: cartItemsTotal = $cart.reduce(
+  $: cartItemsTotal = $cart?.reduce(
     (accumulator: number, product) => accumulator + product.quantity,
     0
   );
@@ -31,7 +31,7 @@
       window.location.href = `https://wa.me/584149409930?text=*Nombre:* ${
         values.name
       }%0A*Método Pago:* ${values.payment}%0A*PRODUCTOS:*%0A${$cart
-        .map(
+        ?.map(
           (item) =>
             `Nombre: ${item.name} - Precio: $${item.price} - Cantidad: ${item.quantity}%0A - SLUG: ${item.slug.current}`
         )
@@ -82,7 +82,7 @@
     <div
       class="mt-8 space-y-3 rounded-lg overflow-y-scroll h-[38vh] border bg-white px-2 py-4 sm:px-6"
     >
-      {#each $cart as product}
+      {#each $cart || [] as product}
         <div class="flex flex-col rounded-lg bg-white sm:flex-row">
           <img
             class="m-2 h-24 w-28 rounded-md border object-cover object-center"

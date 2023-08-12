@@ -19,13 +19,13 @@
   let searchTerm = '';
   let searchResults: Product[] = [];
 
-  $: cartTotal = $cart.reduce(
+  $: cartTotal = $cart?.reduce(
     (accumulator: number, product) =>
       accumulator + product.price * product.quantity,
     0
   );
 
-  $: cartItemsTotal = $cart.reduce(
+  $: cartItemsTotal = $cart?.reduce(
     (accumulator: number, product) => accumulator + product.quantity,
     0
   );
@@ -114,11 +114,11 @@
         aria-label="Cart"
         class="relative text-gray-700 text-lg"
       >
-        {#if $cart.length > 0}
+        {#if $cart?.length > 0}
           <span
             class="absolute -top-2.5 left-1 inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full"
           >
-            {$cart.length}
+            {$cart?.length}
           </span>
         {/if}
         <Cart />
@@ -136,7 +136,7 @@
           {:else}
             <span>No hay productos en el carrito</span>
           {/each}
-          {#if $cart.length > 0}
+          {#if $cart?.length > 0}
             <hr />
             <div class="mt-3 flex justify-between items-center">
               <div class=" flex flex-col">
@@ -144,7 +144,7 @@
                   {cartItemsTotal} producto{cartItemsTotal === 1 ? '' : 's'}
                 </span>
                 <span class="font-medium mt-1">
-                  ${cartTotal < 1 ? '0.00' : cartTotal.toFixed(2)}
+                  ${cartTotal < 1 ? '0.00' : cartTotal?.toFixed(2)}
                 </span>
               </div>
               <a

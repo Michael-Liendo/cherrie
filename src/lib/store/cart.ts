@@ -1,8 +1,9 @@
+import { browser } from "$app/environment";
 import type { Product, ProductCart } from "$lib/types/Product";
 import { notifications } from "@whizzes/svelte-notifications";
 import { writable } from "svelte/store";
 
-const storedCart = localStorage.getItem("cart");
+const storedCart = browser ? localStorage.getItem("cart") : null;
 
 export const cart = writable<ProductCart[]>(JSON.parse(storedCart || "[]"));
 
@@ -13,39 +14,51 @@ export function addProduct(product: Product): void {
 
 		if (index < 0) {
 			const newCart = [...cartProducts, { ...product, quantity: 1 }];
-			localStorage.setItem("cart", JSON.stringify(newCart));
+			if (browser) {
+				localStorage.setItem("cart", JSON.stringify(newCart));
+			}
 			return newCart;
 		} else {
 			cartProducts[index].quantity += 1;
-			localStorage.setItem("cart", JSON.stringify(cartProducts));
+			if (browser) {
+				localStorage.setItem("cart", JSON.stringify(cartProducts));
+			}
 			return cartProducts;
 		}
 	});
 }
 
+// ...
+
 export function removeProduct(id: string): void {
-	cart.update((cart) => {
-		const newCart = cart.filter((product) => id !== product._id);
-		localStorage.setItem("cart", JSON.stringify(newCart));
+	cart.update((cartProducts) => {
+		const newCart = cartProducts.filter((product) => id !== product._id);
+		if (browser) {
+			localStorage.setItem("cart", JSON.stringify(newCart));
+		}
 		return newCart;
 	});
 }
 
 export function decrementQuantity(product: Product): void {
-	cart.update((cart) => {
-		const index = cart.findIndex(({ _id }) => _id === product._id);
+	cart.update((cartProducts) => {
+		const index = cartProducts.findIndex(({ _id }) => _id === product._id);
 
 		if (index < 0) {
-			return [...cart];
+			return [...cartProducts];
 		} else {
-			if (cart[index].quantity <= 1) {
-				removeProduct(cart[index]._id);
-				localStorage.setItem("cart", JSON.stringify(cart));
-				return cart;
+			if (cartProducts[index].quantity <= 1) {
+				removeProduct(cartProducts[index]._id);
+				if (browser) {
+					localStorage.setItem("cart", JSON.stringify(cartProducts));
+				}
+				return cartProducts;
 			} else {
-				cart[index].quantity -= 1;
-				localStorage.setItem("cart", JSON.stringify(cart));
-				return cart;
+				cartProducts[index].quantity -= 1;
+				if (browser) {
+					localStorage.setItem("cart", JSON.stringify(cartProducts));
+				}
+				return cartProducts;
 			}
 		}
 	});
@@ -53,5 +66,7 @@ export function decrementQuantity(product: Product): void {
 
 export function clearCart() {
 	cart.set([]);
-	localStorage.setItem("cart", JSON.stringify([]));
+	if (browser) {
+		localStorage.setItem("cart", JSON.stringify([]));
+	}
 }

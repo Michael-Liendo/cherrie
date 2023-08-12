@@ -4,12 +4,16 @@
   import MdiCheck from '~icons/mdi/check';
 
   import { page } from '$app/stores';
+  import { browser } from '$app/environment';
 
   import Footer from '$lib/components/Footer.svelte';
   import Navbar from '$lib/components/Navbar.svelte';
   import '../app.css';
 
-  let notification = Boolean(sessionStorage.getItem('notification') || true);
+  let notification: boolean;
+  if (browser) {
+    notification = Boolean(sessionStorage.getItem('notification') || true);
+  }
 
   let notificationText =
     $page.data.notifications[
