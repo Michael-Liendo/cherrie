@@ -1,5 +1,3 @@
-export const ssr = false;
-
 import type { Product } from "$lib/types/Product.js";
 import { createClient } from "@sanity/client";
 

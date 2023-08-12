@@ -2,8 +2,6 @@ import type { Product } from "$lib/types/Product.js";
 import { createClient } from "@sanity/client";
 import { error } from "@sveltejs/kit";
 
-export const ssr = false;
-
 const client = createClient({
 	projectId: import.meta.env.VITE_SANITY_PROYECT_ID,
 	dataset: "production",

@@ -1,5 +1,3 @@
-export const ssr = false;
-
 import type { HomeObject } from "$lib/types/sanity/Home.js";
 import { createClient } from "@sanity/client";
 
