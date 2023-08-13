@@ -28,8 +28,6 @@ export function addProduct(product: Product): void {
 	});
 }
 
-// ...
-
 export function removeProduct(id: string): void {
 	cart.update((cartProducts) => {
 		const newCart = cartProducts.filter((product) => id !== product._id);
