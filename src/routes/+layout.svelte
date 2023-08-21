@@ -37,7 +37,7 @@
 
 {#if notification}
   <div
-    class="flex items-center justify-between h-10 bg-slate-900 text-white px-2 sm:px-16 md:px-20 xl:px-28"
+    class="flex items-center text-sm md:text-base justify-between bg-slate-900 text-white py-1 px-2 sm:px-16 md:px-20 xl:px-28"
   >
     <div />
     <p>
