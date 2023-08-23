@@ -9,7 +9,7 @@ const client = createClient({
 });
 
 /** @type {import('./$types').PageLoad} */
-export async function load({ fetch }) {
+export async function load() {
 	try {
 		const products: Product[] = await client.fetch(`
 			*[_type == "product"]{

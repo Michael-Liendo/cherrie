@@ -1,29 +1,26 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import Card from '$lib/components/Card.svelte';
-  import type { Collection } from '$lib/types/sanity/Home';
-
-  let collections: Collection[] = $page.data.collections;
+  import ProductCard from '$lib/components/Home/ProductCard.svelte';
 </script>
 
 <svelte:head>
-  <title>Colecciones - Sarteza</title>
-  <meta name="description" content={'Lista de colecciones de sarteza'} />
+  <title>Productos - Sarteza</title>
+  <meta name="description" content={'Lista de productos de sarteza'} />
   <meta
     name="keywords"
-    content="Sarteza, ropa, accesorios, moda, tendencias, products de sarteza, mejores Colecciones"
+    content="Sarteza, ropa, accesorios, moda, tendencias, products de sarteza, mejores productos"
   />
   <!-- Schema.org markup for Google+ -->
-  <meta itemprop="name" content="Colecciones - Sarteza" />
-  <meta itemprop="description" content={'Lista de colecciones de sarteza'} />
+  <meta itemprop="name" content="Productos - Sarteza" />
+  <meta itemprop="description" content={'Lista de productos de sarteza'} />
 
   <meta itemprop="image" content="https://sarteza.com/images/logo.png" />
   <!-- Open Graph data -->
-  <meta property="og:title" content="Colecciones - Sarteza" />
+  <meta property="og:title" content="Productos - Sarteza" />
   <meta property="og:type" content="product" />
   <meta property="og:url" content="https://sarteza.com/products" />
   <meta property="og:image" content="https://sarteza.com/images/logo.png" />
-  <meta property="og:description" content="Lista de colecciones de sarteza" />
+  <meta property="og:description" content="Lista de productos de sarteza" />
   <meta property="og:site_name" content="Sarteza" />
 </svelte:head>
 
@@ -48,7 +45,7 @@
             href="/collections"
             class="rounded-md p-1 text-sm font-medium text-gray-600 focus:text-gray-900 focus:shadow hover:text-gray-800"
           >
-            Colecciones
+            collections
           </a>
         </div>
       </div>
@@ -57,26 +54,7 @@
 </nav>
 
 <div class="min-h-screen mt-5 flex justify-between flex-wrap">
-  {#each collections as collection}
-    <a
-      href={`/collections/${collection._id}`}
-      class="max-w-sm my-5 bg-white border border-gray-200 rounded-lg shadow"
-    >
-      <img
-        class="rounded-t-lg object-cover"
-        src={collection.src}
-        alt={collection.name}
-      />
-      <div class="p-5">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-          {collection.name}
-        </h5>
-        {#if collection.description}
-          <p class="mb-3 font-normal text-gray-700">
-            {collection.description}
-          </p>
-        {/if}
-      </div>
-    </a>
+  {#each $page.data.products as product}
+    <ProductCard {product} />
   {/each}
 </div>
