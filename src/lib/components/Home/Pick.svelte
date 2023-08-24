@@ -11,8 +11,9 @@
     alt={collection.name}
     class="object-cover rounded-lg w-full h-full"
   />
-  <button
+  <a
+    href={`/collections/${collection._id}`}
     class="flex items-center justify-between w-3/4 text-lg p-3.5 bg-white rounded-lg absolute bottom-4"
-    >{collection.name} <MdiArrowRight /></button
+    >{collection.name} <MdiArrowRight /></a
   >
 </div>
