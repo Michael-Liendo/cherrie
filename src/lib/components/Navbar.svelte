@@ -64,8 +64,8 @@
         >
           <ul class="py-2 text-sm text-gray-700">
             <li>
-              <a href="/products" class="block px-4 py-2 hover:bg-gray-100"
-                >Accesorios</a
+              <a href="/collections" class="block px-4 py-2 hover:bg-gray-100"
+                >Colecciones</a
               >
             </li>
           </ul>
