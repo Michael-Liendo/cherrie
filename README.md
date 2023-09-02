@@ -1,6 +1,6 @@
 # sarteza svelte shop
 
-This project is a virtual store developed with Next.js and TypeScript. In the store, users can browse different product categories, add products to their cart, and complete a purchase.
+This project is a virtual store developed with SvelteKit and TypeScript. In the store, users can browse different product categories, add products to their cart, and complete a purchase.
 
 ## Installation
 
