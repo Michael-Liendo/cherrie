@@ -97,7 +97,7 @@
     itemprop="description"
     content="Descubre la mejor selección de lencería de moda en Chérrie, la tienda líder en Venezuela. Encuentra las últimas tendencias y estilos para mujeres."
   />
-  <meta itemprop="image" content="https://cherrie.lat/images/logo.png" />
+  <meta itemprop="image" content="/favicon.jpg" />
   <!-- Open Graph data -->
   <meta
     property="og:title"
@@ -105,7 +105,7 @@
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cherrie.lat/" />
-  <meta property="og:image" content="https://cherrie.lat/images/logo.png" />
+  <meta property="og:image" content="/favicon.jpg" />
   <meta
     property="og:description"
     content="Descubre la mejor selección de ropa  de moda en Chérrie, la tienda líder en Venezuela. Encuentra las últimas tendencias y estilos para mujeres."
