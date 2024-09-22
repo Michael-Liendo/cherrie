@@ -82,35 +82,35 @@
 </script>
 
 <svelte:head>
-  <title>Cherrie - Tienda de Lencería en Venezuela</title>
+  <title>Chérrie - Tienda de Lencería en Venezuela</title>
   <meta
     name="description"
-    content="Descubre la mejor selección de ropa de moda en Cherrie, la tienda líder en Venezuela. Encuentra las últimas tendencias y estilos para mujeres."
+    content="Descubre la mejor selección de ropa de moda en Chérrie, la tienda líder en Venezuela. Encuentra las últimas tendencias y estilos para mujeres."
   />
   <meta
     name="keywords"
-    content="Cherrie, tienda de ropa, accesorios de moda, Venezuela, tendencias, estilo, compras en línea, envíos rápidos, mejor tienda de Venezuela"
+    content="Chérrie, tienda de ropa, accesorios de moda, Venezuela, tendencias, estilo, compras en línea, envíos rápidos, mejor tienda de Venezuela"
   />
   <!-- Schema.org markup for Google+ -->
-  <meta itemprop="name" content="Cherrie - Tienda de Lencería en Venezuela" />
+  <meta itemprop="name" content="Chérrie - Tienda de Lencería en Venezuela" />
   <meta
     itemprop="description"
-    content="Descubre la mejor selección de lencería de moda en Cherrie, la tienda líder en Venezuela. Encuentra las últimas tendencias y estilos para mujeres."
+    content="Descubre la mejor selección de lencería de moda en Chérrie, la tienda líder en Venezuela. Encuentra las últimas tendencias y estilos para mujeres."
   />
   <meta itemprop="image" content="https://cherrie.lat/images/logo.png" />
   <!-- Open Graph data -->
   <meta
     property="og:title"
-    content="Cherrie - Tienda de Lencería en Venezuela"
+    content="Chérrie - Tienda de Lencería en Venezuela"
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cherrie.lat/" />
   <meta property="og:image" content="https://cherrie.lat/images/logo.png" />
   <meta
     property="og:description"
-    content="Descubre la mejor selección de ropa  de moda en Cherrie, la tienda líder en Venezuela. Encuentra las últimas tendencias y estilos para mujeres."
+    content="Descubre la mejor selección de ropa  de moda en Chérrie, la tienda líder en Venezuela. Encuentra las últimas tendencias y estilos para mujeres."
   />
-  <meta property="og:site_name" content="Cherrie" />
+  <meta property="og:site_name" content="Chérrie" />
   <!-- Facebook graph data -->
 </svelte:head>
 

@@ -14,22 +14,22 @@
 </script>
 
 <svelte:head>
-  <title>{product.name} - Cherrie</title>
+  <title>{product.name} - Chérrie</title>
   <meta name="description" content={product.description || 'Sin descripción'} />
   <meta
     name="keywords"
-    content="Cherrie, ropa, accesorios, moda, tendencias, {product.name},{product
+    content="Chérrie, ropa, accesorios, moda, tendencias, {product.name},{product
       .collection?.name}"
   />
   <!-- Schema.org markup for Google+ -->
-  <meta itemprop="name" content="{product.name} - Cherrie" />
+  <meta itemprop="name" content="{product.name} - Chérrie" />
   <meta
     itemprop="description"
     content={product.description || 'Sin descripción'}
   />
   <meta itemprop="image" content={product.images[mainImageIndex]} />
   <!-- Open Graph data -->
-  <meta property="og:title" content="{product.name} - Cherrie" />
+  <meta property="og:title" content="{product.name} - Chérrie" />
   <meta property="og:type" content="product" />
   <meta property="og:url" content={productUrl} />
   <meta property="og:image" content={product.images[mainImageIndex]} />
@@ -37,7 +37,7 @@
     property="og:description"
     content={product.description || 'Sin descripción'}
   />
-  <meta property="og:site_name" content="Cherrie" />
+  <meta property="og:site_name" content="Chérrie" />
   <!-- Facebook graph data -->
 </svelte:head>
 

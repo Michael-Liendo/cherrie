@@ -9,13 +9,13 @@
     ?.reduce(
       (accumulator: number, product) =>
         accumulator + product.price * product.quantity,
-      0
+      0,
     )
     .toFixed(2);
 
   $: cartItemsTotal = $cart?.reduce(
     (accumulator: number, product) => accumulator + product.quantity,
-    0
+    0,
   );
 
   const { handleSubmit, values, errors } = newForm({
@@ -33,7 +33,7 @@
       }%0A*Método Pago:* ${values.payment}%0A*PRODUCTOS:*%0A${$cart
         ?.map(
           (item) =>
-            `Nombre: ${item.name} - Precio: $${item.price} - Cantidad: ${item.quantity}%0A - SLUG: ${item.slug.current}`
+            `Nombre: ${item.name} - Precio: $${item.price} - Cantidad: ${item.quantity}%0A - SLUG: ${item.slug.current}`,
         )
         .join(', ')}%0A*TOTAL:* $${cartTotal}`;
       clearCart();
@@ -42,8 +42,8 @@
 </script>
 
 <svelte:head>
-  <title>Realizar pedido - Cherrie</title>
-  <meta name="description" content="Realiza el pedido ahora en Cherrie" />
+  <title>Realizar pedido - Chérrie</title>
+  <meta name="description" content="Realiza el pedido ahora en Chérrie" />
 </svelte:head>
 
 <nav class="flex mt-5">

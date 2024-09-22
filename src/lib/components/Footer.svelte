@@ -3,7 +3,7 @@
     <div class="w-full flex flex-col md:flex-row py-6">
       <div class="flex-1 mb-6 text-black">
         <a class="flex text-slate-700 font-bold text-2xl lg:text-4xl" href="/">
-          <span>SARTEZA</span>
+          <span>CHÉRRIE</span>
         </a>
       </div>
 
@@ -91,6 +91,6 @@
   <div class="bg-slate-500 opacity-40 rounded h-[1px]" />
 
   <small class="flex justify-center text-center text-gray-700 text-sm my-3"
-    >Copyright &copy; <a href="/">Cherrie</a>. Todos los derechos reservados</small
+    >Copyright &copy; <a href="/">Chérrie</a>. Todos los derechos reservados</small
   >
 </footer>

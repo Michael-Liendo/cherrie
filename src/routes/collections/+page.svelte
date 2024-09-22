@@ -7,24 +7,24 @@
 </script>
 
 <svelte:head>
-  <title>Colecciones - Cherrie</title>
+  <title>Colecciones - Chérrie</title>
   <meta name="description" content={'Lista de colecciones de cherrie'} />
   <meta
     name="keywords"
-    content="Cherrie, ropa, accesorios, moda, tendencias, products de cherrie, mejores Colecciones"
+    content="Chérrie, ropa, accesorios, moda, tendencias, products de cherrie, mejores Colecciones"
   />
   <!-- Schema.org markup for Google+ -->
-  <meta itemprop="name" content="Colecciones - Cherrie" />
+  <meta itemprop="name" content="Colecciones - Chérrie" />
   <meta itemprop="description" content={'Lista de colecciones de cherrie'} />
 
   <meta itemprop="image" content="https://cherrie.lat/images/logo.png" />
   <!-- Open Graph data -->
-  <meta property="og:title" content="Colecciones - Cherrie" />
+  <meta property="og:title" content="Colecciones - Chérrie" />
   <meta property="og:type" content="product" />
   <meta property="og:url" content="https://cherrie.lat/products" />
   <meta property="og:image" content="https://cherrie.lat/images/logo.png" />
   <meta property="og:description" content="Lista de colecciones de cherrie" />
-  <meta property="og:site_name" content="Cherrie" />
+  <meta property="og:site_name" content="Chérrie" />
 </svelte:head>
 
 <nav class="flex mt-5">

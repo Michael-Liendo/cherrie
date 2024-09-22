@@ -26,9 +26,9 @@
 
   <link rel="canonical" href={`https://cherrie.lat/`} />
 
-  <meta name="author" content="Cherrie" />
-  <meta name="publisher" content="Cherrie" />
-  <meta name="copyright" content="Cherrie" />
+  <meta name="author" content="Chérrie" />
+  <meta name="publisher" content="Chérrie" />
+  <meta name="copyright" content="Chérrie" />
   <meta name="robots" content="index, follow" />
 
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
