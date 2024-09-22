@@ -28,7 +28,7 @@
       payment: Yup.string().required('Tipo de pago es requerido'),
     }),
     onSubmit(values, helpers) {
-      window.location.href = `https://wa.me/584149409930?text=*Nombre:* ${
+      window.location.href = `https://wa.me/584142226189?text=*Nombre:* ${
         values.name
       }%0A*Método Pago:* ${values.payment}%0A*PRODUCTOS:*%0A${$cart
         ?.map(
