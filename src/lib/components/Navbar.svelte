@@ -45,11 +45,14 @@
 </script>
 
 <nav class="flex justify-between items-center py-4">
-  <h1 class="text-2xl mx-2 md:mx-0"><a href="/">Chérrie</a></h1>
+  <!-- <h1 class="text-2xl mx-2 md:mx-0"><a href="/">Chérrie</a></h1> -->
+  <a href="/"
+    ><img src="/logo.jpg" alt="logo" class="max-h-20 sm:h-20 w-auto" /></a
+  >
   <ul
     class="hidden md:flex md:space-x-4 lg:space-x-10 font-semibold text-gray-700"
   >
-    <li class="relative hover:text-gray-600">
+    <li class="relative hover:text-gray-900">
       <button
         class="flex items-center"
         on:click={() => (shopDropdownIsOpen = !shopDropdownIsOpen)}
@@ -64,7 +67,7 @@
         >
           <ul class="py-2 text-sm text-gray-700">
             <li>
-              <a href="/collections" class="block px-4 py-2 hover:bg-gray-100"
+              <a href="/collections" class="block px-4 py-2 hover:bg-gray-200"
                 >Colecciones</a
               >
             </li>
@@ -72,7 +75,7 @@
         </div>
       {/if}
     </li>
-    <li class="hover:text-gray-600"><a href="/products">Productos</a></li>
+    <li class="hover:text-gray-800"><a href="/products">Productos</a></li>
   </ul>
   <div class="flex space-x-5 items-center">
     <div class="relative">
