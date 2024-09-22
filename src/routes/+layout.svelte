@@ -24,11 +24,11 @@
 <svelte:head>
   <meta name="theme-color" content="#3bd6cf" />
 
-  <link rel="canonical" href={`https://sarteza.com/`} />
+  <link rel="canonical" href={`https://cherrie.lat/`} />
 
-  <meta name="author" content="Sarteza" />
-  <meta name="publisher" content="Sarteza" />
-  <meta name="copyright" content="Sarteza" />
+  <meta name="author" content="Cherrie" />
+  <meta name="publisher" content="Cherrie" />
+  <meta name="copyright" content="Cherrie" />
   <meta name="robots" content="index, follow" />
 
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />

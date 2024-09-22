@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sarteza.com/sitemap.xml
+Sitemap: https://cherrie.lat/sitemap.xml

@@ -1,4 +1,4 @@
-# sarteza svelte shop
+# cherrie svelte shop
 
 This project is a virtual store developed with SvelteKit and TypeScript. In the store, users can browse different product categories, add products to their cart, and complete a purchase.
 
@@ -7,7 +7,7 @@ This project is a virtual store developed with SvelteKit and TypeScript. In the 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Michael-Liendo/sarteza.git
+git clone https://github.com/Michael-Liendo/cherrie.git
 ```
 
 2. Install the dependencies:

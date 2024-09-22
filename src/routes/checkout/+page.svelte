@@ -42,8 +42,8 @@
 </script>
 
 <svelte:head>
-  <title>Realizar pedido - Sarteza</title>
-  <meta name="description" content="Realiza el pedido ahora en Sarteza" />
+  <title>Realizar pedido - Cherrie</title>
+  <meta name="description" content="Realiza el pedido ahora en Cherrie" />
 </svelte:head>
 
 <nav class="flex mt-5">

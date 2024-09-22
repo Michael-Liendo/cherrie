@@ -7,24 +7,24 @@
 </script>
 
 <svelte:head>
-  <title>Colecciones - Sarteza</title>
-  <meta name="description" content={'Lista de colecciones de sarteza'} />
+  <title>Colecciones - Cherrie</title>
+  <meta name="description" content={'Lista de colecciones de cherrie'} />
   <meta
     name="keywords"
-    content="Sarteza, ropa, accesorios, moda, tendencias, products de sarteza, mejores Colecciones"
+    content="Cherrie, ropa, accesorios, moda, tendencias, products de cherrie, mejores Colecciones"
   />
   <!-- Schema.org markup for Google+ -->
-  <meta itemprop="name" content="Colecciones - Sarteza" />
-  <meta itemprop="description" content={'Lista de colecciones de sarteza'} />
+  <meta itemprop="name" content="Colecciones - Cherrie" />
+  <meta itemprop="description" content={'Lista de colecciones de cherrie'} />
 
-  <meta itemprop="image" content="https://sarteza.com/images/logo.png" />
+  <meta itemprop="image" content="https://cherrie.lat/images/logo.png" />
   <!-- Open Graph data -->
-  <meta property="og:title" content="Colecciones - Sarteza" />
+  <meta property="og:title" content="Colecciones - Cherrie" />
   <meta property="og:type" content="product" />
-  <meta property="og:url" content="https://sarteza.com/products" />
-  <meta property="og:image" content="https://sarteza.com/images/logo.png" />
-  <meta property="og:description" content="Lista de colecciones de sarteza" />
-  <meta property="og:site_name" content="Sarteza" />
+  <meta property="og:url" content="https://cherrie.lat/products" />
+  <meta property="og:image" content="https://cherrie.lat/images/logo.png" />
+  <meta property="og:description" content="Lista de colecciones de cherrie" />
+  <meta property="og:site_name" content="Cherrie" />
 </svelte:head>
 
 <nav class="flex mt-5">

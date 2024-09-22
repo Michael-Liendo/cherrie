@@ -82,38 +82,38 @@
 </script>
 
 <svelte:head>
-  <title>Sarteza - Tienda de Ropa y Accesorios en Venezuela</title>
+  <title>Cherrie - Tienda de Ropa y Accesorios en Venezuela</title>
   <meta
     name="description"
-    content="Descubre la mejor selección de ropa y accesorios de moda en Sarteza, la tienda líder en Venezuela. Encuentra las últimas tendencias y estilos para hombres y mujeres."
+    content="Descubre la mejor selección de ropa y accesorios de moda en Cherrie, la tienda líder en Venezuela. Encuentra las últimas tendencias y estilos para hombres y mujeres."
   />
   <meta
     name="keywords"
-    content="Sarteza, tienda de ropa, accesorios de moda, Venezuela, tendencias, estilo, compras en línea, envíos rápidos, mejor tienda de Venezuela"
+    content="Cherrie, tienda de ropa, accesorios de moda, Venezuela, tendencias, estilo, compras en línea, envíos rápidos, mejor tienda de Venezuela"
   />
   <!-- Schema.org markup for Google+ -->
   <meta
     itemprop="name"
-    content="Sarteza - Tienda de Ropa y Accesorios en Venezuela"
+    content="Cherrie - Tienda de Ropa y Accesorios en Venezuela"
   />
   <meta
     itemprop="description"
-    content="Descubre la mejor selección de ropa y accesorios de moda en Sarteza, la tienda líder en Venezuela. Encuentra las últimas tendencias y estilos para hombres y mujeres."
+    content="Descubre la mejor selección de ropa y accesorios de moda en Cherrie, la tienda líder en Venezuela. Encuentra las últimas tendencias y estilos para hombres y mujeres."
   />
-  <meta itemprop="image" content="https://sarteza.com/images/logo.png" />
+  <meta itemprop="image" content="https://cherrie.lat/images/logo.png" />
   <!-- Open Graph data -->
   <meta
     property="og:title"
-    content="Sarteza - Tienda de Ropa y Accesorios en Venezuela"
+    content="Cherrie - Tienda de Ropa y Accesorios en Venezuela"
   />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sarteza.com/" />
-  <meta property="og:image" content="https://sarteza.com/images/logo.png" />
+  <meta property="og:url" content="https://cherrie.lat/" />
+  <meta property="og:image" content="https://cherrie.lat/images/logo.png" />
   <meta
     property="og:description"
-    content="Descubre la mejor selección de ropa y accesorios de moda en Sarteza, la tienda líder en Venezuela. Encuentra las últimas tendencias y estilos para hombres y mujeres."
+    content="Descubre la mejor selección de ropa y accesorios de moda en Cherrie, la tienda líder en Venezuela. Encuentra las últimas tendencias y estilos para hombres y mujeres."
   />
-  <meta property="og:site_name" content="Sarteza" />
+  <meta property="og:site_name" content="Cherrie" />
   <!-- Facebook graph data -->
 </svelte:head>
 

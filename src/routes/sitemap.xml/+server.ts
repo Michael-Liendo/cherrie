@@ -28,7 +28,7 @@ export async function GET() {
 }
 
 async function generateRoutes() {
-	const domain = "https://sarteza.com";
+	const domain = "https://cherrie.lat";
 	// const productsSlug = await getProducts();
 
 	const paths = [{ path: "/", priority: "1.00" }];

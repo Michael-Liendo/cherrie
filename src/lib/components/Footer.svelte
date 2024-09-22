@@ -39,7 +39,7 @@
           </li>
           <li class="mt-2 inline-block mr-2 md:block md:mr-0">
             <a
-              href="https://www.instagram.com/sarteza.art/"
+              href="https://www.instagram.com/cherrie.art/"
               target="_blank"
               class="no-underline hover:underline text-gray-700 hover:text-gray-800"
               >Instagram</a
@@ -91,6 +91,6 @@
   <div class="bg-slate-500 opacity-40 rounded h-[1px]" />
 
   <small class="flex justify-center text-center text-gray-700 text-sm my-3"
-    >Copyright &copy; <a href="/">Sarteza</a>. Todos los derechos reservados</small
+    >Copyright &copy; <a href="/">Cherrie</a>. Todos los derechos reservados</small
   >
 </footer>

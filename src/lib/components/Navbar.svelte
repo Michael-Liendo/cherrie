@@ -45,7 +45,7 @@
 </script>
 
 <nav class="flex justify-between items-center py-4">
-  <h1 class="text-2xl mx-2 md:mx-0"><a href="/">Sarteza</a></h1>
+  <h1 class="text-2xl mx-2 md:mx-0"><a href="/">Cherrie</a></h1>
   <ul
     class="hidden md:flex md:space-x-4 lg:space-x-10 font-semibold text-gray-700"
   >
