@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-  <meta name="theme-color" content="#3bd6cf" />
+  <meta name="theme-color" content="#ffffff" />
 
   <link rel="canonical" href={`https://cherrie.lat/`} />
 
