@@ -8,7 +8,7 @@ const storedCart = browser ? localStorage.getItem("cart") : null;
 export const cart = writable<ProductCart[]>(JSON.parse(storedCart || "[]"));
 
 export function addProduct(product: Product): void {
-	notifications.notifySuccess("Product added", "Cart");
+	notifications.notifySuccess("Producto agregado", "Carrito");
 	cart.update((cartProducts) => {
 		const index = cartProducts.findIndex(({ _id }) => _id === product._id);
 
