@@ -47,7 +47,7 @@
 <nav class="flex justify-between items-center py-4">
   <!-- <h1 class="text-2xl mx-2 md:mx-0"><a href="/">Chérrie</a></h1> -->
   <a href="/"
-    ><img src="/logo.jpg" alt="logo" class="max-h-20 sm:h-20 w-auto" /></a
+    ><img src="/logo.png" alt="logo" class="max-h-20 sm:h-20 w-auto" /></a
   >
   <ul
     class="hidden md:flex md:space-x-4 lg:space-x-10 font-semibold text-gray-700"
